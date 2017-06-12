@@ -30,6 +30,7 @@ module.exports = {
         // css和scss的处理交由gulp来处理
         {test: /\.css$/,loaders: ['style-loader','css-loader?importLoaders=1','postcss-loader']},
         {test: /.scss$/, loaders: ['style-loader','css-loader?importLoaders=1','sass-loader']},
+        {test: /.less$/, loaders: ['style-loader','css-loader?importLoaders=1','less-loader']},
         {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},
         {test: /\.json$/,loader: 'json-loader'},
         {test: /\.html$/,loader: 'file?name=/public/[name].[ext]'}, 
