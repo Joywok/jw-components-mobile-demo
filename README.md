@@ -14,7 +14,8 @@ jw-components-mobile-demo
 					|- index.html
 					|-index.js
 					|-index.scss
-				|-checkbox--|- index.html
+				|-checkbox
+					|- index.html
 					|-index.js
 					|-index.scss
 				|-xxxxxxx同上
