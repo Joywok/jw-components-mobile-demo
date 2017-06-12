@@ -1,9 +1,10 @@
 # jw-components-mobile-demo
 
 
+## 功能：给开发jw-components-mobile的小伙伴提供一个调试环境
+
 ## 前置条件：node版本 6.5以上
 
-## 功能：给开发jw-components-mobile的小伙伴提供一个调试环境
 
 ## 一 目录结构介绍
 
