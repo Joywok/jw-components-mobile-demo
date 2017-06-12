@@ -1,10 +1,11 @@
 # jw-components-mobile-demo
 
 
-`注:` 1. jw-components-mobile-demo只是一个调试环境，jw-components-mobile是组件库，两个有不同的git地址;
-  为了方便组件开发调试，所以直接将jw-components-mobile clone到jw-components-mobile-demo/node_modules目录中，但是组件的开发代码依然是写在jw-components-mobile中，组件的使用部分写在jw-components-mobile-demo中；
-  2. jw-components-mobile组件库在实际使用时是通过npm install 安装到项目中的，但jw-components-mobile组件源码由github托管；
-  所以开发时需要在github的jw-components-mobile中开发，组件完成后，再发布到npm中,依赖此组件的相关项目执行npm update即可使用新添加的组件，此文档不含发布到npm的步骤；
+`注:` 
+1. jw-components-mobile-demo只是一个调试环境，jw-components-mobile是组件库，两个有不同的git地址;
+为了方便组件开发调试，所以直接将jw-components-mobile clone到jw-components-mobile-demo/node_modules目录中，但是组件的开发代码依然是写在jw-components-mobile中，组件的使用部分写在jw-components-mobile-demo中；
+2. jw-components-mobile组件库在实际使用时是通过npm install 安装到项目中的，但jw-components-mobile组件源码由github托管；
+所以开发时需要在github的jw-components-mobile中开发，组件完成后，再发布到npm中,依赖此组件的相关项目执行npm update即可使用新添加的组件，此文档不含发布到npm的步骤；
 	
 
 ## 前置条件：node版本 6.5以上
