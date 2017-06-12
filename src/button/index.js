@@ -1,13 +1,12 @@
 import { Button } from "jw-components-mobile";
 import React from 'react';
 import ReactDOM from 'react-dom';
-const a = 3;
 
 /* eslint global-require: 0 */
 const ButtonExample = () => (
-    <div className="btn-container">
+    <div className="button-demo">
+    	<h6>Button Demo </h6>
       <div>
-      <h1>sdsdfs</h1>
         <Button className="btn" type="primary">primary button</Button>
         <Button className="btn" disabled onClick={e => console.log(e)}>
           disabled button

@@ -13,7 +13,7 @@ module.exports = {
     devtool: 'source-map', 
     //入口文件输出配置
     output: {
-      path: path.resolve(__dirname, 'demo'),
+      path: path.resolve(__dirname, 'dist'),
       filename: '[name].js',
       // chunkFilename: "nav/[name].js"
     },
@@ -52,7 +52,7 @@ module.exports = {
       jquery: "window.$"
     },
     devServer: {
-      contentBase: "./",//本地服务器所加载的页面所在的目录
+      contentBase: "./src",//本地服务器所加载的页面所在的目录
       historyApiFallback: true,//不跳转
       // publicPath:'src',
       hot:true,

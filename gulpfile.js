@@ -12,18 +12,12 @@ gulp.task('css', ()=>{
       precision: 10
       })
   .pipe(gulp.dest('src/'))
-  .pipe(gulp.dest('demo/'));
+  .pipe(gulp.dest('dist/'));
 });
-
-// gulp.task('js',()=>{
-//   return gulp.src('src/**/*.js')
-//        .pipe(babel())
-//        .pipe(gulp.dest("demo/"));
-// })
 
 gulp.task('html',()=>{
   return gulp.src('src/**/index.html')
-    .pipe(gulp.dest('demo/'));
+    .pipe(gulp.dest('dist/'));
 })
 
 
