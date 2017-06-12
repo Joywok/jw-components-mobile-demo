@@ -7,18 +7,19 @@
 ## 一 目录结构介绍
 
 ```bash
-		jw-components-mobile-demo ----- dist(发布的目录，webpack -p 命令后生成的文件目录，里面的html可双击浏览器中运行)
-			----- src(demo源文件)----button----|- index.html
-																				|-index.js
-																				|-index.scss
-
-														|-checkbox--|- index.html
-																				|-index.js
-																				|-index.scss
-
-														|-xxxxxxx---- 同上
-												----|-package.json（脚手架配置文件）
-												----|-webpack.config.js (打包配置文件)
+jw-components-mobile-demo 
+			|----- dist(发布的目录，webpack -p 命令后生成的文件目录，里面的html可双击浏览器中运行)
+			|----- src(demo源文件)
+				|----button
+					|- index.html
+					|-index.js
+					|-index.scss
+				|-checkbox--|- index.html
+					|-index.js
+					|-index.scss
+				|-xxxxxxx同上
+			|-package.json（脚手架配置文件）
+			|-webpack.config.js (打包配置文件)
 ```															
 
 
