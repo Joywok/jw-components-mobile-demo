@@ -78,7 +78,11 @@ git checkout feature_my_componentsname (切一个以“feature_姓名缩写_comp
   安装依赖
 ```js
 npm install
-之后按照组件开发规范步骤进行开发，开发完成之后，执行 webpack -p 生成新的jw-components-mobile组件
+```
+  运行gulp 监听js变化，实时更新
+```js
+gulp
+之后按照组件开发规范步骤进行开发即可，不用执行打包命令
 ```
 
 3. 调试组件，操作如下：
