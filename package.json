@@ -10,10 +10,10 @@
   },
   "main": "index.js",
   "scripts": {
-    "webpackStart": "webpack-dev-server --inline --hot --host 192.168.1.95",
+    "webpackStart": "webpack-dev-server --inline --hot --host 192.168.1.156",
     "webpackBuild": "webpack --display-error-details",
     "webpackWatch": "webpack --progress --colors --watch",
-    "start": "webpack-dev-server --inline --hot --host 192.168.1.95",
+    "start": "webpack-dev-server --inline --hot --host 192.168.1.156",
     "build": "webpack -p"
   },
   "dependencies": {
