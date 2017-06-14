@@ -1,12 +1,15 @@
 # jw-components-mobile-demo
 
 
+
+
 jw-components-mobile-demo 为 jw-component-mobile组件 提供一个调试环境。
 
 
 jw-components-mobile组件库在实际使用时是通过npm install 安装到项目中的，但组件源码由github托管，所以开发组件时需要在这个里面编码；    
 
 在这个需求下，为了方便开发调试，也为了保证组件开发人员有一个统一的调试环境，所以搭建了这个demo，但它跟 jw-components-mobile 是两个不同的项目。         
+
 
 
 ## 前置条件：node版本 6.5以上
