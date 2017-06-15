@@ -121,10 +121,8 @@ cd jw-components-mobile-demo/src
 git checkout feature_my_componentsname (切一个以“feature_姓名缩写_componentsname” 格式命名的新分支)
 mkdir componentsname (创建一个以组件的名字来命名的文件夹,并创建index.html index.js index.scss文件，就可以引用组件并调试了)
 ```
-2. 想要在浏览器看效果，移步“二 准备demo的代码环境”的第4步和第5步
-
-3. 如需将新添加的demo文件打包至dist文件夹中，则按如下步骤操作即可(开发时可不用管这个)：
-	将新添加的组件demo加到webpack.config.js的 entry 中，如 
+2. 将新添加的组件demo加到webpack.config.js的 entry 中，此也为必要操作，否则不会去转换es6语法，打包的时候也没有这些文件。   
+参考以下添加： 
 ```js
 entry: {
 	'button/index':[path.resolve(__dirname, 'src/button/index.js')],
@@ -132,6 +130,11 @@ entry: {
 	'componentsname/index':[path.resolve(__dirname, 'src/componentsname/index.js')]
 },
 ```
+3. 想要在浏览器看效果，移步“二 准备demo的代码环境”的第4步和第5步
+
+
+完结
+	
 
 
 
