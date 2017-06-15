@@ -9,6 +9,8 @@ module.exports = {
       'button/index':[path.resolve(__dirname, 'src/button/index.js')],
       'checkbox/index':[path.resolve(__dirname, 'src/checkbox/index.js')],
       'carousel/index':[path.resolve(__dirname, 'src/carousel/index.js')],
+      'white-space/index':[path.resolve(__dirname, 'src/white-space/index.js')],
+      'wing-blank/index':[path.resolve(__dirname, 'src/wing-blank/index.js')],
     },
     // 查错设置，添加此配置后，开发过程中能定位到错误的具体位置，生产时可关闭
     devtool: 'source-map', 
