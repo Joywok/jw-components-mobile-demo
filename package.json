@@ -6,14 +6,14 @@
     "jw-components-mobile"
   ],
   "engines": {
-    "node" : ">=6.5"
+    "node": ">=6.5"
   },
   "main": "index.js",
   "scripts": {
-    "webpackStart": "webpack-dev-server --inline --hot --host 192.168.1.156",
+    "webpackStart": "webpack-dev-server --inline --hot --host 127.0.0.1",
     "webpackBuild": "webpack --display-error-details",
     "webpackWatch": "webpack --progress --colors --watch",
-    "start": "webpack-dev-server --inline --hot --host 192.168.1.156",
+    "start": "webpack-dev-server --inline --hot --host 192.168.0.104",
     "build": "webpack -p"
   },
   "dependencies": {
@@ -63,7 +63,7 @@
     "webpack-dev-server": "^2.4.1",
     "webpack-visualizer-plugin": "^0.1.6",
     "wolfy87-eventemitter": "^5.1.0",
-    "jw-components-mobile": ""
+    "jw-components-mobile": "^0.0.24"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
@@ -77,16 +77,17 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.8.0",
-    "react": "^15.4.0",
-    "react-dom": "^15.4.0",
-    "react-native": "~0.42.0",
     "expect": "^1.20.2",
     "got": "^6.7.1",
     "gulp-useref": "^3.1.2",
     "husky": "^0.12.0",
     "nyc": "^10.0.0",
     "postcss-pxtorem": "^3.3.1",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-native": "~0.42.0",
     "redbox-react": "^1.3.2",
-    "rimraf": "^2.5.4"
+    "rimraf": "^2.5.4",
+    "svg-sprite-loader": "^3.4.1"
   }
 }

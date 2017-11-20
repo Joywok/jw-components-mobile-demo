@@ -10,9 +10,11 @@ module.exports = {
       'checkbox/index':[path.resolve(__dirname, 'src/checkbox/index.js')],
       'tabs/index':[path.resolve(__dirname, 'src/tabs/index.js')],
       'progress/index':[path.resolve(__dirname, 'src/progress/index.js')],
+      'toast/index':[path.resolve(__dirname, 'src/toast/index.js')],
+      'modal/index':[path.resolve(__dirname, 'src/modal/index.js')],
     },
     // 查错设置，添加此配置后，开发过程中能定位到错误的具体位置，生产时可关闭
-    devtool: 'source-map', 
+    devtool: 'source-map',
     //入口文件输出配置
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -35,7 +37,7 @@ module.exports = {
         {test: /.less$/, loaders: ['style-loader','css-loader?importLoaders=1','less-loader']},
         {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},
         {test: /\.json$/,loader: 'json-loader'},
-        {test: /\.html$/,loader: 'file?name=/public/[name].[ext]'}, 
+        {test: /\.html$/,loader: 'file?name=/public/[name].[ext]'},
         {
           test: /\.svg$/,
           loader: 'file-loader',
@@ -75,4 +77,3 @@ module.exports = {
       // }
     }
 };
-
