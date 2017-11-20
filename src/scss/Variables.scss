@@ -1,0 +1,147 @@
+//
+// Variables
+// --------------------------------------------------
+
+$fontSize: 41.4; // plus设计图
+
+//== Colors
+//
+//## Gray and brand colors
+
+$gray-darker:      #202020; // 需要突出展示的文字 (大标题,docviewer背景色，弹出框蒙版色)
+$gray-dark:        #333333; // 全局字体颜色 (标题 用户名 正文字)
+$gray:             #666666; // 次级文字颜色（使用场景待补充）
+$gray-light:        #999999; // 多用于提示性文字（placehodler等），或标识不可用状态（如按钮disabled背景色，链接disabled等），
+$gray-lighter:           #b0b0b0; // 辅助性颜色，多用于对象名称旁边的辅助文字颜色（如创建时间，职位等）
+$gray-lighter-1:    #cccccc; // 灰色浅1 ( 多用于比较重的分隔线，边框等 )
+$gray-lighter-2:    #e7e7e7; // 灰色浅2（多用于比较浅的分隔线，边框等）
+$gray-lighter-3:    #f1f1f1; // 灰色浅3，( 主背景色 ) 
+$gray-lighter-4:    #f7f7f7; // 灰色浅4，( navbar背景，下拉列表背景等 ) 
+$gray-lighter-5:    #fafafa; // 灰色浅5，（超浅背景色） 
+$white: #fff;
+
+$gray-light-1:      #494949; // 新建IT设备维修表单样式
+$gray-light-2:      #5b5b5b; // 明细页面值的颜色
+
+
+//## 注： 以下色系需由 @齐华锋 整理
+$brand-primary:         #f55928;   //站点主色(header背景色，文字链接，button背景等 )
+$brand-primary-dark:    lighten($brand-primary, 20%);   // 主色加深 （button的border，在特定场景也可用作文字颜色）
+$brand-primary-darker:  lighten($brand-primary, 13.5%);  // 主色加加深 （特定场景可用作文字颜色）
+$brand-primary-light:    lighten($brand-primary, 46.7%);  // 多用于标识不可用状态（如按钮disabled背景色），
+$brand-primary-lighter:  lighten($brand-primary, 93.5%);  //多用于背景色（如进度条背景色）
+
+$brand-success:         #5cb85c;  // 通过性色彩 （如某个校验通过后，icon图标的色调）
+$brand-success-dark:    lighten($brand-success, 20%);   // 色彩加深 同主色
+$brand-success-darker:  lighten($brand-success, 13.5%);  // 色彩加加深 同主色
+$brand-success-light:    lighten($brand-success, 46.7%);  // 色彩浅多 同主色
+$brand-success-lighter:  lighten($brand-success, 93.5%);  //色彩超浅 同主色
+
+$brand-info:            #5bc0de;  // 信息类色彩 
+$brand-info-dark:    lighten($brand-info, 20%);   // 色彩加深 同主色
+$brand-info-darker:  lighten($brand-info, 13.5%);  // 色彩加加深 同主色
+$brand-info-light:    lighten($brand-info, 46.7%);  // 色彩浅多 同主色
+$brand-info-lighter:  lighten($brand-info, 93.5%);  //色彩超浅 同主色
+
+$brand-warning:         #ffd600; // 警示色(警示性文字)
+$brand-warning-dark:    lighten($brand-warning, 20%);   // 色彩加深 同主色
+$brand-warning-darker:  lighten($brand-warning, 13.5%);  // 色彩加加深 同主色
+$brand-warning-light:    lighten($brand-warning, 46.7%);  // 色彩浅多 同主色
+$brand-warning-lighter:  lighten($brand-warning, 93.5%);  //色彩超浅 同主色
+
+$brand-danger:          #d9534f; // 最明显警示色(表单错误信息提示，必填项标识等)
+$brand-danger-dark:    lighten($brand-danger, 20%);   // 色彩加深 同主色
+$brand-danger-darker:  lighten($brand-danger, 13.5%);  // 色彩加加深 同主色
+$brand-danger-light:    lighten($brand-danger, 46.7%);  // 色彩浅多 同主色
+$brand-danger-lighter:  lighten($brand-danger, 93.5%);  //色彩超浅 同主色
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles
+
+$body-bg:              #fff;  // 页面背景色
+$text-color:            $gray-dark;  // 全局字体颜色
+$link-color:            $brand-primary; //全局链接颜色
+$link-hover-color:      darken($link-color, 15%); // 链接hover时的颜色
+$font-white: 				#fff;
+
+
+//== function
+//
+//## px to rem
+@function pxTorem($px){ 
+	@return $px / $fontSize * 1rem; 
+};
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  Arial,Sans-serif; // 无衬线字体（用于移动端）
+$font-family-serif:       Georgia, "Times New Roman", Times, serif; // 衬线字体 (用于web端)
+$font-family-monospace:   couriernew, courier, monospace; // 等宽字体 （如`<code>`, `<kbd>`, and `<pre>`）
+$font-family-base:        $font-family-sans-serif;
+
+//## 注：此字号是移动端规则，web端规则需由 @齐华锋 补充
+$font-size-large:        pxTorem(16); // 大字号(大标题)
+$font-size-base:         pxTorem(14);  // 基础字号(全局字号,正文，标题)
+$font-size-secondary:    39px;  // 次级文字( 使用场景待补充 )
+$font-size-small:        pxTorem(13); // 小字号（注释／小字）
+$font-size-xsmall:       pxTorem(12); // 超小字号, 辅助类文字（如信息来源，创建时间）
+
+$font-size-xsmall1:       pxTorem(10); // 非项目卡片的餐厅编号  总价字体
+
+$font-size-large1:        pxTorem(15); // 大字号(button字号)
+$font-size-xlarge:        pxTorem(20); // 待办卡片上金额
+$font-size-xlarge1:        pxTorem(22); // 非项目审批底部总金额
+
+//== Components
+
+//== Buttons
+//
+//## For each of JMF's buttons, define text, background and border color.
+
+$btn-font-weight:                normal;
+
+$btn-default-color:              #666;
+$btn-default-bg:                 #f5f5f5;
+$btn-default-border:             #ccc;
+
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 $brand-primary;
+$btn-primary-border:             darken($btn-primary-bg, 5%);
+
+$btn-success-color:              #fff;
+$btn-success-bg:                 $brand-success;
+$btn-success-border:             darken($btn-success-bg, 5%);
+
+$btn-info-color:                 #fff;
+$btn-info-bg:                    $brand-info;
+$btn-info-border:                darken($btn-info-bg, 5%);
+
+$btn-warning-color:              #665600;
+$btn-warning-bg:                 $brand-warning;
+$btn-warning-border:             darken($btn-warning-bg, 5%);
+
+$btn-danger-color:               #fff;
+$btn-danger-bg:                  $brand-danger;
+$btn-danger-border:              darken($btn-danger-bg, 5%);
+
+$btn-link-disabled-color:        $gray-light;
+
+
+
+$app-color:#F55928;
+$yellow:#FFD600;
+$shadow:0 0 10px 0 rgba(128,128,128,0.12);
+$btn-shadow:-5px 0 5px 3px rgba(128, 128, 128, 0.22);
+$border-radius: pxToRem(8);
+
+
+.bg-yellow{
+	background:$yellow;
+}
+.bg-orange{
+	background:$app-color;
+}

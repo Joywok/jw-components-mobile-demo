@@ -2,3 +2,10 @@
   height: 210px;
   overflow: auto;
 }
+
+.icon-alert-success {
+  display: inline-block;
+  background-image: url(./images/defeat.png);
+  width: 100px;
+  height: 100px;
+}
