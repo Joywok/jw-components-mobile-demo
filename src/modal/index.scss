@@ -1,11 +1,123 @@
-.popup-list .am-list-body {
-  height: 210px;
-  overflow: auto;
-}
+@import "./../scss/Variables";
+$fz:41.4;
 
+// 弹出框的图片
 .icon-alert-success {
   display: inline-block;
   background-image: url(./images/defeat.png) ;
-  width: 100px;
-  height: 100px;
+  width:(80/$fz)+rem;
+  height:(80/$fz)+rem;
+}
+
+// 弹出框右上角关闭按钮
+.icon-alert-cancel {
+  display: inline-block;
+  background-image: url(./images/sprite.png);
+  background-position: 0rem -4.456521739130435rem;
+  background-size: 1.2077294685990339rem;
+  width: 0.3502415458937198rem;
+  height: 0.36231884057971014rem;
+}
+
+.eps-dialog{
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:22222;
+	overflow: hidden;
+	.eps-dialog-mark{
+		position: absolute;top:0;
+		right:0;
+		bottom:0;
+		left:0;background: #000000;
+		opacity:0.7;
+	}
+	.eps-dialog-w{
+		position: absolute;
+		left:pxTorem(20);
+		right:pxTorem(20);
+		bottom:0;
+		border-radius: pxTorem(4);
+		.eps-dialog-close{
+			position: absolute;
+			//top:pxTorem(15);
+			//right:pxTorem(15);
+			top:0;
+			right:0;
+			margin:pxTorem(15);
+		}
+		.eps-dialog-title{
+			border-radius: pxTorem(4) pxTorem(4) 0 0;
+			height: pxTorem(63);
+			background: #FFD600;
+			padding:0 pxTorem(35);
+			border:none;
+			.eps-dialog-pic{
+				float: left;
+				margin-top:pxTorem(13);
+				margin-right:pxTorem(10);
+				width: pxTorem(36);
+				height: pxTorem(36);
+				img{
+					width: pxTorem(36);
+					height: pxTorem(36);
+					border-radius: pxTorem(36);
+				}
+			}
+			.eps-dialog-title-c{
+				display: block;
+				line-height: pxTorem(63);
+				color: #494949;
+				font-size:pxTorem(16);
+			}
+		}
+		.eps-dialog-c{
+			background: #fff;
+			//min-height: pxTorem(100);
+			.form-detail{
+				padding:0 pxTorem(35);
+			}
+			.form-item-Rate{
+				vertical-align: middle;
+				.ant-form-item-label{
+					max-width: 125px;
+					text-align: left;
+				}
+				.icon-star{
+					vertical-align: middle;
+				}
+				.icon-star-active{
+					vertical-align: middle;
+				}
+				.Form-item-c>span>span{
+						display: inline-block;font-size: pxTorem(18);
+						margin-left:pxTorem(15);
+				}
+				.Form-item-c>span>span:first-child{
+					margin-left:0;
+				}
+			}
+		}
+		.eps-dialog-btn{
+			border:none;
+			height: pxTorem(55);
+			border-radius: 0 0 pxTorem(4) pxTorem(4);
+			background: #F7F7F7;
+			line-height: pxTorem(55);
+			text-align: center;
+			color: #999999;
+			font-size:pxTorem(17);
+			i{
+				vertical-align: middle;
+				/*width:pxTorem(17);
+				height:pxTorem(17);*/
+			}
+			span{
+				margin-left:pxTorem(10);
+				vertical-align: middle;
+			}
+		}
+	}
 }

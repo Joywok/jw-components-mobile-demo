@@ -1,11 +1,126 @@
-.popup-list .am-list-body {
-  height: 210px;
-  overflow: auto;
+.bg-yellow {
+  background: #FFD600;
+}
+
+.bg-orange {
+  background: #F55928;
 }
 
 .icon-alert-success {
   display: inline-block;
   background-image: url(./images/defeat.png);
-  width: 100px;
-  height: 100px;
+  width: 1.9323671498rem;
+  height: 1.9323671498rem;
+}
+
+.icon-alert-cancel {
+  display: inline-block;
+  background-image: url(./images/sprite.png);
+  background-position: 0rem -4.456521739130435rem;
+  background-size: 1.2077294685990339rem;
+  width: 0.3502415458937198rem;
+  height: 0.36231884057971014rem;
+}
+
+.eps-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 22222;
+  overflow: hidden;
+}
+.eps-dialog .eps-dialog-mark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000000;
+  opacity: 0.7;
+}
+.eps-dialog .eps-dialog-w {
+  position: absolute;
+  left: 0.4830917874rem;
+  right: 0.4830917874rem;
+  bottom: 0;
+  border-radius: 0.0966183575rem;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.3623188406rem;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-title {
+  border-radius: 0.0966183575rem 0.0966183575rem 0 0;
+  height: 1.5217391304rem;
+  background: #FFD600;
+  padding: 0 0.845410628rem;
+  border: none;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-title .eps-dialog-pic {
+  float: left;
+  margin-top: 0.3140096618rem;
+  margin-right: 0.2415458937rem;
+  width: 0.8695652174rem;
+  height: 0.8695652174rem;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-title .eps-dialog-pic img {
+  width: 0.8695652174rem;
+  height: 0.8695652174rem;
+  border-radius: 0.8695652174rem;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-title .eps-dialog-title-c {
+  display: block;
+  line-height: 1.5217391304rem;
+  color: #494949;
+  font-size: 0.38647343rem;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-c {
+  background: #fff;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-c .form-detail {
+  padding: 0 0.845410628rem;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-c .form-item-Rate {
+  vertical-align: middle;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-c .form-item-Rate .ant-form-item-label {
+  max-width: 125px;
+  text-align: left;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-c .form-item-Rate .icon-star {
+  vertical-align: middle;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-c .form-item-Rate .icon-star-active {
+  vertical-align: middle;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-c .form-item-Rate .Form-item-c > span > span {
+  display: inline-block;
+  font-size: 0.4347826087rem;
+  margin-left: 0.3623188406rem;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-c .form-item-Rate .Form-item-c > span > span:first-child {
+  margin-left: 0;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-btn {
+  border: none;
+  height: 1.3285024155rem;
+  border-radius: 0 0 0.0966183575rem 0.0966183575rem;
+  background: #F7F7F7;
+  line-height: 1.3285024155rem;
+  text-align: center;
+  color: #999999;
+  font-size: 0.4106280193rem;
+}
+.eps-dialog .eps-dialog-w .eps-dialog-btn i {
+  vertical-align: middle;
+  /*width:pxTorem(17);
+  height:pxTorem(17);*/
+}
+.eps-dialog .eps-dialog-w .eps-dialog-btn span {
+  margin-left: 0.2415458937rem;
+  vertical-align: middle;
 }

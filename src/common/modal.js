@@ -34,7 +34,7 @@ import React,{ Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Modal, Button } from 'jw-components-mobile';
 // import EpsDialog from './EpsDialog';
-// import Form from "jw-form/dist/editors/mobile";
+import Form from "jw-form/dist/mobile";
 
 class EpsAlert extends Component{
 	constructor(props) {
@@ -128,7 +128,7 @@ export const ConfirmBase = (props)=>{
         dialog.close();
         props.onOk && typeof(props.onOk)=='function' ? props.onOk() : '';
       },
-      style: { float: 'left', width: '50%', border: '0' }
+      style: { float: 'left', width: '50%' }
     },
     {
       text: (<Button className="icon-alert-cancel"></Button>),
@@ -212,6 +212,7 @@ class MemoDialogComponent extends Component{
 		}
 	}
 	render(){
+		console.log(11111111111)
 		this.dataMemo = this.dataMemo ? this.dataMemo : (this.state.defaultValue ? this.state.defaultValue : '');
 		let formData={
 			className:'clear-padding',
@@ -560,7 +561,7 @@ class EpsAlertInfoBase extends Component{
       {
         _.map(this.props.deviceNames,function(item,index){
           if(index<1){
-                  return <span>{item}</span>
+            return <span>{item}</span>
           }else{
             return <span>{','+item}</span>
           }
