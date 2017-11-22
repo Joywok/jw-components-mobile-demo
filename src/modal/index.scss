@@ -1,7 +1,7 @@
 @import "./../scss/Variables";
 $fz:41.4;
 
-// 弹出框的图片
+// alert弹出框的图片
 .icon-alert-success {
   display: inline-block;
   background-image: url(./images/defeat.png) ;
@@ -9,17 +9,21 @@ $fz:41.4;
   height:(80/$fz)+rem;
 }
 
-// 弹出框右上角关闭按钮
-.icon-alert-cancel {
-  display: inline-block;
-  background-image: url(./images/sprite.png);
-  background-position: 0rem -4.456521739130435rem;
-  background-size: 1.2077294685990339rem;
-  width: 0.3502415458937198rem;
-  height: 0.36231884057971014rem;
+// alert弹出框右上角关闭按钮
+.am-modal-button{
+  .icon-alert-cancel {
+    display: inline-block;
+    background-image: url(./images/sprite.png);
+    background-position: 0rem -4.456521739130435rem;
+    background-size: 1.2077294685990339rem;
+    width: 0.3502415458937198rem;
+    height: 0.36231884057971014rem !important;
+  }
 }
 
-.eps-dialog{
+
+
+.jw-dialog{
 	position: fixed;
 	top:0;
 	left:0;
@@ -27,20 +31,20 @@ $fz:41.4;
 	bottom:0;
 	z-index:22222;
 	overflow: hidden;
-	.eps-dialog-mark{
+	.jw-dialog-mark{
 		position: absolute;top:0;
 		right:0;
 		bottom:0;
 		left:0;background: #000000;
 		opacity:0.7;
 	}
-	.eps-dialog-w{
+	.jw-dialog-w{
 		position: absolute;
 		left:pxTorem(20);
 		right:pxTorem(20);
 		bottom:0;
 		border-radius: pxTorem(4);
-		.eps-dialog-close{
+		.jw-dialog-close{
 			position: absolute;
 			//top:pxTorem(15);
 			//right:pxTorem(15);
@@ -48,13 +52,13 @@ $fz:41.4;
 			right:0;
 			margin:pxTorem(15);
 		}
-		.eps-dialog-title{
+		.jw-dialog-title{
 			border-radius: pxTorem(4) pxTorem(4) 0 0;
 			height: pxTorem(63);
 			background: #FFD600;
 			padding:0 pxTorem(35);
 			border:none;
-			.eps-dialog-pic{
+			.jw-dialog-pic{
 				float: left;
 				margin-top:pxTorem(13);
 				margin-right:pxTorem(10);
@@ -66,41 +70,21 @@ $fz:41.4;
 					border-radius: pxTorem(36);
 				}
 			}
-			.eps-dialog-title-c{
+			.jw-dialog-title-c{
 				display: block;
 				line-height: pxTorem(63);
 				color: #494949;
 				font-size:pxTorem(16);
 			}
 		}
-		.eps-dialog-c{
+		.jw-dialog-c{
 			background: #fff;
 			//min-height: pxTorem(100);
 			.form-detail{
 				padding:0 pxTorem(35);
 			}
-			.form-item-Rate{
-				vertical-align: middle;
-				.ant-form-item-label{
-					max-width: 125px;
-					text-align: left;
-				}
-				.icon-star{
-					vertical-align: middle;
-				}
-				.icon-star-active{
-					vertical-align: middle;
-				}
-				.Form-item-c>span>span{
-						display: inline-block;font-size: pxTorem(18);
-						margin-left:pxTorem(15);
-				}
-				.Form-item-c>span>span:first-child{
-					margin-left:0;
-				}
-			}
 		}
-		.eps-dialog-btn{
+		.jw-dialog-btn{
 			border:none;
 			height: pxTorem(55);
 			border-radius: 0 0 pxTorem(4) pxTorem(4);
@@ -120,4 +104,49 @@ $fz:41.4;
 			}
 		}
 	}
+}
+
+.hide-scroll{
+	overflow: hidden!important;
+}
+
+.clear-padding{
+	padding:0!important;
+}
+
+
+.jw-dialog.fix{
+	.jw-dialog-w{
+		top:50%;
+		bottom: auto;
+	}
+}
+
+.appraisal-form{
+	padding:pxTorem(24) 0;
+	min-height: pxTorem(160);
+}
+
+.am-list.jw-list .am-list-body{
+  border:none!important;
+}
+
+// memoDialog的右上角的关闭按钮
+.icon-close-b {
+  display: inline-block;
+  background-image: url(./images/sprite.png);
+  background-position: 0rem -5.036231884057972rem;
+  background-size: 1.2077294685990339rem;
+  width: 0.3502415458937198rem;
+  height: 0.36231884057971014rem;
+}
+
+// memoDialog的确认按钮前的icon
+.icon-check-36 {
+  display: inline-block;
+  background-image: url(./images/sprite.png);
+  background-position: 0rem -12.379227053140097rem;
+  background-size: 1.2077294685990339rem;
+  width: 0.44685990338164255rem;
+  height: 0.4589371980676329rem;
 }

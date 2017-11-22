@@ -13,16 +13,16 @@
   height: 1.9323671498rem;
 }
 
-.icon-alert-cancel {
+.am-modal-button .icon-alert-cancel {
   display: inline-block;
   background-image: url(./images/sprite.png);
   background-position: 0rem -4.456521739130435rem;
   background-size: 1.2077294685990339rem;
   width: 0.3502415458937198rem;
-  height: 0.36231884057971014rem;
+  height: 0.36231884057971014rem !important;
 }
 
-.eps-dialog {
+.jw-dialog {
   position: fixed;
   top: 0;
   left: 0;
@@ -31,7 +31,7 @@
   z-index: 22222;
   overflow: hidden;
 }
-.eps-dialog .eps-dialog-mark {
+.jw-dialog .jw-dialog-mark {
   position: absolute;
   top: 0;
   right: 0;
@@ -40,72 +40,51 @@
   background: #000000;
   opacity: 0.7;
 }
-.eps-dialog .eps-dialog-w {
+.jw-dialog .jw-dialog-w {
   position: absolute;
   left: 0.4830917874rem;
   right: 0.4830917874rem;
   bottom: 0;
   border-radius: 0.0966183575rem;
 }
-.eps-dialog .eps-dialog-w .eps-dialog-close {
+.jw-dialog .jw-dialog-w .jw-dialog-close {
   position: absolute;
   top: 0;
   right: 0;
   margin: 0.3623188406rem;
 }
-.eps-dialog .eps-dialog-w .eps-dialog-title {
+.jw-dialog .jw-dialog-w .jw-dialog-title {
   border-radius: 0.0966183575rem 0.0966183575rem 0 0;
   height: 1.5217391304rem;
   background: #FFD600;
   padding: 0 0.845410628rem;
   border: none;
 }
-.eps-dialog .eps-dialog-w .eps-dialog-title .eps-dialog-pic {
+.jw-dialog .jw-dialog-w .jw-dialog-title .jw-dialog-pic {
   float: left;
   margin-top: 0.3140096618rem;
   margin-right: 0.2415458937rem;
   width: 0.8695652174rem;
   height: 0.8695652174rem;
 }
-.eps-dialog .eps-dialog-w .eps-dialog-title .eps-dialog-pic img {
+.jw-dialog .jw-dialog-w .jw-dialog-title .jw-dialog-pic img {
   width: 0.8695652174rem;
   height: 0.8695652174rem;
   border-radius: 0.8695652174rem;
 }
-.eps-dialog .eps-dialog-w .eps-dialog-title .eps-dialog-title-c {
+.jw-dialog .jw-dialog-w .jw-dialog-title .jw-dialog-title-c {
   display: block;
   line-height: 1.5217391304rem;
   color: #494949;
   font-size: 0.38647343rem;
 }
-.eps-dialog .eps-dialog-w .eps-dialog-c {
+.jw-dialog .jw-dialog-w .jw-dialog-c {
   background: #fff;
 }
-.eps-dialog .eps-dialog-w .eps-dialog-c .form-detail {
+.jw-dialog .jw-dialog-w .jw-dialog-c .form-detail {
   padding: 0 0.845410628rem;
 }
-.eps-dialog .eps-dialog-w .eps-dialog-c .form-item-Rate {
-  vertical-align: middle;
-}
-.eps-dialog .eps-dialog-w .eps-dialog-c .form-item-Rate .ant-form-item-label {
-  max-width: 125px;
-  text-align: left;
-}
-.eps-dialog .eps-dialog-w .eps-dialog-c .form-item-Rate .icon-star {
-  vertical-align: middle;
-}
-.eps-dialog .eps-dialog-w .eps-dialog-c .form-item-Rate .icon-star-active {
-  vertical-align: middle;
-}
-.eps-dialog .eps-dialog-w .eps-dialog-c .form-item-Rate .Form-item-c > span > span {
-  display: inline-block;
-  font-size: 0.4347826087rem;
-  margin-left: 0.3623188406rem;
-}
-.eps-dialog .eps-dialog-w .eps-dialog-c .form-item-Rate .Form-item-c > span > span:first-child {
-  margin-left: 0;
-}
-.eps-dialog .eps-dialog-w .eps-dialog-btn {
+.jw-dialog .jw-dialog-w .jw-dialog-btn {
   border: none;
   height: 1.3285024155rem;
   border-radius: 0 0 0.0966183575rem 0.0966183575rem;
@@ -115,12 +94,52 @@
   color: #999999;
   font-size: 0.4106280193rem;
 }
-.eps-dialog .eps-dialog-w .eps-dialog-btn i {
+.jw-dialog .jw-dialog-w .jw-dialog-btn i {
   vertical-align: middle;
   /*width:pxTorem(17);
   height:pxTorem(17);*/
 }
-.eps-dialog .eps-dialog-w .eps-dialog-btn span {
+.jw-dialog .jw-dialog-w .jw-dialog-btn span {
   margin-left: 0.2415458937rem;
   vertical-align: middle;
+}
+
+.hide-scroll {
+  overflow: hidden !important;
+}
+
+.clear-padding {
+  padding: 0 !important;
+}
+
+.jw-dialog.fix .jw-dialog-w {
+  top: 50%;
+  bottom: auto;
+}
+
+.appraisal-form {
+  padding: 0.5797101449rem 0;
+  min-height: 3.8647342995rem;
+}
+
+.am-list.jw-list .am-list-body {
+  border: none !important;
+}
+
+.icon-close-b {
+  display: inline-block;
+  background-image: url(./images/sprite.png);
+  background-position: 0rem -5.036231884057972rem;
+  background-size: 1.2077294685990339rem;
+  width: 0.3502415458937198rem;
+  height: 0.36231884057971014rem;
+}
+
+.icon-check-36 {
+  display: inline-block;
+  background-image: url(./images/sprite.png);
+  background-position: 0rem -12.379227053140097rem;
+  background-size: 1.2077294685990339rem;
+  width: 0.44685990338164255rem;
+  height: 0.4589371980676329rem;
 }
