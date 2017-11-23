@@ -22,7 +22,7 @@ $fz:41.4;
 }
 
 
-
+//memoDialog(备注弹框)样式
 .jw-dialog{
 	position: fixed;
 	top:0;
@@ -31,6 +31,8 @@ $fz:41.4;
 	bottom:0;
 	z-index:22222;
 	overflow: hidden;
+
+// 遮罩层样式
 	.jw-dialog-mark{
 		position: absolute;top:0;
 		right:0;
@@ -44,6 +46,7 @@ $fz:41.4;
 		right:pxTorem(20);
 		bottom:0;
 		border-radius: pxTorem(4);
+    // 关闭按钮样式
 		.jw-dialog-close{
 			position: absolute;
 			//top:pxTorem(15);
@@ -52,6 +55,7 @@ $fz:41.4;
 			right:0;
 			margin:pxTorem(15);
 		}
+    // 备注弹框标题
 		.jw-dialog-title{
 			border-radius: pxTorem(4) pxTorem(4) 0 0;
 			height: pxTorem(63);
@@ -84,6 +88,7 @@ $fz:41.4;
 				padding:0 pxTorem(35);
 			}
 		}
+    // 备注弹框确认按钮
 		.jw-dialog-btn{
 			border:none;
 			height: pxTorem(55);

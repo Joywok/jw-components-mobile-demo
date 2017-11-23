@@ -1,4 +1,4 @@
-import { Button } from 'jw-components-mobile';
+import { Button, Toast } from 'jw-components-mobile';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AlertBase, ConfirmBase, MemoDialog } from '../common/modal';
@@ -65,12 +65,17 @@ const memoDialog = () =>{
 
 }
 
+function showToastNoMask() {
+  Toast.info('Toast without mask !!!');
+}
+
 const App = () => (
   <div>
     <br/>
     <Button className="modal-alert" onClick={alertModal}>Alert Modal</Button> <br/>
     <Button className="modal-alert" onClick={confirmModal}>Confirm Modal</Button><br/>
-    <Button className="modal-alert" onClick={memoDialog}>Memo Dialog</Button>
+    <Button className="modal-alert" onClick={memoDialog}>Memo Dialog</Button><br/>
+    <Button className="modal-alert" onClick={showToastNoMask}>Toast Mask Test</Button>
   </div>
 );
 
