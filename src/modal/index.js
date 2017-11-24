@@ -1,4 +1,5 @@
-import { Button, Toast } from 'jw-components-mobile';
+import { Button, Toast, } from 'jw-components-mobile';
+import { NoticeBar } from 'antd-mobile';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AlertBase, ConfirmBase, MemoDialog } from '../common/modal';
@@ -66,18 +67,42 @@ const memoDialog = () =>{
 }
 
 function showToastNoMask() {
-  Toast.info('Toast without mask !!!');
+  Toast.info('Toast without mask !!!', 2, null, true);
 }
 
-const App = () => (
-  <div>
-    <br/>
-    <Button className="modal-alert" onClick={alertModal}>Alert Modal</Button> <br/>
-    <Button className="modal-alert" onClick={confirmModal}>Confirm Modal</Button><br/>
-    <Button className="modal-alert" onClick={memoDialog}>Memo Dialog</Button><br/>
-    <Button className="modal-alert" onClick={showToastNoMask}>Toast Mask Test</Button>
-  </div>
-);
+function successToast() {
+  Toast.success('Load success !!!', 1, null, false);
+}
+
+function showToast() {
+  Toast.info('This is a toast tips !!!', 1, null, false);
+}
+
+
+class App extends React.Component{
+
+  render(){
+    return(
+      <div>
+        <br/>
+        <NoticeBar mode="closable" icon={null}>Remove the default icon.</NoticeBar><br/>
+        <Button className="modal-alert" onClick={alertModal}>Alert Modal</Button> <br/>
+        <Button className="modal-alert" onClick={confirmModal}>Confirm Modal</Button><br/>
+        <Button className="modal-alert" onClick={memoDialog}>Memo Dialog</Button><br/>
+        <Button className="modal-alert" onClick={showToastNoMask}>Toast Mask Test</Button><br/>
+        <Button className="modal-alert" onClick={successToast}>success</Button><br />
+        <Button className="modal-alert" onClick={showToast}>text only</Button>
+      </div>
+    )
+  }
+
+  componentDidMount(){
+
+  }
+
+}
+
+
 
 
 ReactDOM.render(<App />, document.getElementById('root'));

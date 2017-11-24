@@ -3,6 +3,10 @@
   "plugins":  [
     ["import", {
       "style": true,
+      "libraryName": "antd-mobile"
+    }],
+    ["import", {
+      "style": true,
       "libraryName": "jw-components-mobile"
     }],
   ]
