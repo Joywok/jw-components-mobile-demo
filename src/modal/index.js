@@ -1,5 +1,4 @@
-import { Button, Toast, } from 'jw-components-mobile';
-import { NoticeBar } from 'antd-mobile';
+import { Button, Toast, NoticeBar } from 'jw-components-mobile';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AlertBase, ConfirmBase, MemoDialog } from '../common/modal';
