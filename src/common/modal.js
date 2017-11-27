@@ -41,6 +41,7 @@ class JwAlert extends Component{
   }
 
 	render(){
+		console.log(this.props,'qqqqqqqqqqqqqqq')
 		let icon = this.props.icon ? (<i className={ this.props.icon }></i>) : '';
 		return (<div className="jw-alert-simple" ref="jwModalAlert">
 				{ icon }

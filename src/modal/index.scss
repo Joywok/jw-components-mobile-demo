@@ -5,8 +5,8 @@ $fz:41.4;
 .icon-alert-success {
   display: inline-block;
   background-image: url(./images/defeat.png) ;
-  width:(80/$fz)+rem;
-  height:(80/$fz)+rem;
+  width:pxTorem(80);
+  height:pxTorem(80);
 }
 
 // alert弹出框右上角关闭按钮
@@ -154,13 +154,4 @@ $fz:41.4;
   background-size: 1.2077294685990339rem;
   width: 0.44685990338164255rem;
   height: 0.4589371980676329rem;
-}
-
-
-
-// Toast遮罩层样式
-.am-toast.am-toast-mask{
-  background-color: rgba(0,0,0,0.5)!important;
-  background-color: #000;
-  filter:Alpha(opacity=50);
 }

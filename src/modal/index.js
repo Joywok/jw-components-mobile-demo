@@ -1,7 +1,7 @@
-import { Button, Toast, NoticeBar } from 'jw-components-mobile';
+import { Button, AlertBase, ConfirmBase,MemoDialog } from 'jw-components-mobile';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AlertBase, ConfirmBase, MemoDialog } from '../common/modal';
+
 
 
 const alertModal = () =>{
@@ -20,13 +20,15 @@ const alertModal = () =>{
       }
     });
 
+      // AlertBase.close();
+
 }
 
 const confirmModal = () =>{
 
   ConfirmBase({
      tip: '确认要提交维修订单？',
-     icon: '',
+     icon: 'icon-alert-success',
      onOk: ()=>{  // 点击确认回调
        console.log('onOk')
      },
@@ -65,18 +67,6 @@ const memoDialog = () =>{
 
 }
 
-function showToastNoMask() {
-  Toast.info('Toast without mask !!!', 2, null, true);
-}
-
-function successToast() {
-  Toast.success('Load success !!!', 1, null, false);
-}
-
-function showToast() {
-  Toast.info('This is a toast tips !!!', 1, null, false);
-}
-
 
 class App extends React.Component{
 
@@ -84,13 +74,9 @@ class App extends React.Component{
     return(
       <div>
         <br/>
-        <NoticeBar mode="closable" icon={null}>Remove the default icon.</NoticeBar><br/>
         <Button className="modal-alert" onClick={alertModal}>Alert Modal</Button> <br/>
         <Button className="modal-alert" onClick={confirmModal}>Confirm Modal</Button><br/>
         <Button className="modal-alert" onClick={memoDialog}>Memo Dialog</Button><br/>
-        <Button className="modal-alert" onClick={showToastNoMask}>Toast Mask Test</Button><br/>
-        <Button className="modal-alert" onClick={successToast}>success</Button><br />
-        <Button className="modal-alert" onClick={showToast}>text only</Button>
       </div>
     )
   }
@@ -100,8 +86,5 @@ class App extends React.Component{
   }
 
 }
-
-
-
 
 ReactDOM.render(<App />, document.getElementById('root'));
