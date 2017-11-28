@@ -1,8 +1,8 @@
-import { Button, AlertBase, ConfirmBase,MemoDialog } from 'jw-components-mobile';
+import { Button, AlertBase, ConfirmBase, MemoDialog } from 'jw-components-mobile';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
+console.log(AlertBase,ConfirmBase,'ConfirmBaseConfirmBase')
 
 const alertModal = () =>{
 
@@ -28,7 +28,7 @@ const confirmModal = () =>{
 
   ConfirmBase({
      tip: '确认要提交维修订单？',
-     icon: 'icon-alert-success',
+     icon: '',
      onOk: ()=>{  // 点击确认回调
        console.log('onOk')
      },
@@ -38,10 +38,10 @@ const confirmModal = () =>{
      onClose: ()=>{ // 关闭弹框回调
 
      },
-     okBtn: {   // 此参数可不传，不传默认为 确认
-       text: '确认'
+     okbtn: {   // 此参数可不传，不传默认为 确认
+       text: '确定'
      },
-     cancelBtn: { // 此参数可不传，不传默认为 取消
+     cancelbtn: { // 此参数可不传，不传默认为 取消
        text: '取消'
      }
    });

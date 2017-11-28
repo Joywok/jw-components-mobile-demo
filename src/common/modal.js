@@ -37,11 +37,11 @@ class JwAlert extends Component{
 	}
   // 组件加载完毕
   componentDidMount(){
-
+		$(ReactDOM.findDOMNode(this.refs.jwModalAlert)).closest('.am-modal').addClass('jw-modal-alert');
+		$(ReactDOM.findDOMNode(this.refs.jwModalAlert)).closest('.am-modal-wrap').parent().addClass('jw-alert-custom');
   }
 
 	render(){
-		console.log(this.props,'qqqqqqqqqqqqqqq')
 		let icon = this.props.icon ? (<i className={ this.props.icon }></i>) : '';
 		return (<div className="jw-alert-simple" ref="jwModalAlert">
 				{ icon }
@@ -104,38 +104,39 @@ export const AlertBase = (props)=>{
     });
  * 可以从外面关闭弹框 let tmpconfirm = ConfirmBase({...});  tmpconfirm.close();
  */
-export const ConfirmBase = (props)=>{
-	const alert = Modal.alert;
-	const dialog = alert(
-    '',
-    (<JwAlert tip={ props.tip } icon={ props.icon }/>),
-    [{
-      text: props.cancelbtn&&props.cancelbtn.text ? props.cancelbtn.text : '取消',
-      onPress: () => {
-        dialog.close();
-        props.onCancel && typeof(props.onCancel)=='function' ? props.onCancel() : '';
-      },
-      style: { float: 'left', width: '50%', 'border-right':'1px solid #e5e4e5' }
-    },
-    {
-      text: props.okbtn&&props.okbtn.text ? props.okbtn.text : '确认',
-      onPress: () => {
-        dialog.close();
-        props.onOk && typeof(props.onOk)=='function' ? props.onOk() : '';
-      },
-      style: { float: 'left', width: '50%' }
-    },
-    {
-      text: (<Button className="icon-alert-cancel"></Button>),
-      onPress: () => {
-        dialog.close();
-        props.onClose && typeof(props.onClose)=='function' ? props.onClose() : '';
-      },
-      style: { position: 'absolute', right: '5px', top: '0', background: 'transparent', width: '1.0144927536rem' },
-    }]
-  )
-  return dialog;
-}
+ export const ConfirmBase = (props)=>{
+ 	const alert = Modal.alert;
+ 	const dialog = alert(
+     '',
+     (<EpsAlert tip={ props.tip } icon={ props.icon }/>),
+     [{
+       text: props.cancelbtn&&props.cancelbtn.text ? props.cancelbtn.text : '取消',
+       onPress: () => {
+         dialog.close();
+         props.onCancel && typeof(props.onCancel)=='function' ? props.onCancel() : '';
+       },
+       style: { float: 'left', width: '50%', 'border-right':'1px solid #e5e4e5' }
+     },
+     {
+       text: props.okbtn&&props.okbtn.text ? props.okbtn.text : '确认',
+       onPress: () => {
+         dialog.close();
+         props.onOk && typeof(props.onOk)=='function' ? props.onOk() : '';
+       },
+       style: { float: 'left', width: '50%', border: '0' }
+     },
+     {
+       text: (<Button className="icon-alert-cancel"></Button>),
+       onPress: () => {
+         dialog.close();
+         props.onClose && typeof(props.onClose)=='function' ? props.onClose() : '';
+       },
+       style: { position: 'absolute', right: '5px', top: '0', background: 'transparent', width: '1.0144927536rem' },
+     }]
+   )
+   return dialog;
+ }
+
 
 
 // 备注弹框开始

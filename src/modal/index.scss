@@ -1,157 +1,221 @@
-@import "./../scss/Variables";
-$fz:41.4;
-
-// alert弹出框的图片
-.icon-alert-success {
-  display: inline-block;
-  background-image: url(./images/defeat.png) ;
-  width:pxTorem(80);
-  height:pxTorem(80);
-}
-
-// alert弹出框右上角关闭按钮
-.am-modal-button{
-  .icon-alert-cancel {
-    display: inline-block;
-    background-image: url(./images/sprite.png);
-    background-position: 0rem -4.456521739130435rem;
-    background-size: 1.2077294685990339rem;
-    width: 0.3502415458937198rem;
-    height: 0.36231884057971014rem !important;
-  }
-}
-
-
-//memoDialog(备注弹框)样式
-.jw-dialog{
-	position: fixed;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	z-index:22222;
-	overflow: hidden;
-
-// 遮罩层样式
-	.jw-dialog-mark{
-		position: absolute;top:0;
-		right:0;
-		bottom:0;
-		left:0;background: #000000;
-		opacity:0.7;
-	}
-	.jw-dialog-w{
-		position: absolute;
-		left:pxTorem(20);
-		right:pxTorem(20);
-		bottom:0;
-		border-radius: pxTorem(4);
-    // 关闭按钮样式
-		.jw-dialog-close{
-			position: absolute;
-			//top:pxTorem(15);
-			//right:pxTorem(15);
-			top:0;
-			right:0;
-			margin:pxTorem(15);
-		}
-    // 备注弹框标题
-		.jw-dialog-title{
-			border-radius: pxTorem(4) pxTorem(4) 0 0;
-			height: pxTorem(63);
-			background: #FFD600;
-			padding:0 pxTorem(35);
-			border:none;
-			.jw-dialog-pic{
-				float: left;
-				margin-top:pxTorem(13);
-				margin-right:pxTorem(10);
-				width: pxTorem(36);
-				height: pxTorem(36);
-				img{
-					width: pxTorem(36);
-					height: pxTorem(36);
-					border-radius: pxTorem(36);
-				}
-			}
-			.jw-dialog-title-c{
-				display: block;
-				line-height: pxTorem(63);
-				color: #494949;
-				font-size:pxTorem(16);
-			}
-		}
-		.jw-dialog-c{
-			background: #fff;
-			//min-height: pxTorem(100);
-			.form-detail{
-				padding:0 pxTorem(35);
-			}
-		}
-    // 备注弹框确认按钮
-		.jw-dialog-btn{
-			border:none;
-			height: pxTorem(55);
-			border-radius: 0 0 pxTorem(4) pxTorem(4);
-			background: #F7F7F7;
-			line-height: pxTorem(55);
-			text-align: center;
-			color: #999999;
-			font-size:pxTorem(17);
-			i{
-				vertical-align: middle;
-				/*width:pxTorem(17);
-				height:pxTorem(17);*/
-			}
-			span{
-				margin-left:pxTorem(10);
-				vertical-align: middle;
-			}
-		}
-	}
-}
-
-.hide-scroll{
-	overflow: hidden!important;
-}
-
-.clear-padding{
-	padding:0!important;
-}
-
-
-.jw-dialog.fix{
-	.jw-dialog-w{
-		top:50%;
-		bottom: auto;
-	}
-}
-
-.appraisal-form{
-	padding:pxTorem(24) 0;
-	min-height: pxTorem(160);
-}
-
-.am-list.jw-list .am-list-body{
-  border:none!important;
-}
-
-// memoDialog的右上角的关闭按钮
-.icon-close-b {
-  display: inline-block;
-  background-image: url(./images/sprite.png);
-  background-position: 0rem -5.036231884057972rem;
-  background-size: 1.2077294685990339rem;
-  width: 0.3502415458937198rem;
-  height: 0.36231884057971014rem;
-}
-
-// memoDialog的确认按钮前的icon
-.icon-check-36 {
-  display: inline-block;
-  background-image: url(./images/sprite.png);
-  background-position: 0rem -12.379227053140097rem;
-  background-size: 1.2077294685990339rem;
-  width: 0.44685990338164255rem;
-  height: 0.4589371980676329rem;
-}
+// @import "./../scss/Variables";
+// $fz:41.4;
+//
+// // alert弹出框的图片
+// .icon-alert-success {
+//   display: inline-block;
+//   background-image: url(./images/defeat.png) ;
+//   width:pxTorem(80);
+//   height:pxTorem(80);
+// }
+//
+// // alert弹出框右上角关闭按钮
+// .am-modal-button{
+//   .icon-alert-cancel {
+//     display: inline-block;
+//     background-image: url(./images/sprite.png);
+//     background-position: 0rem -4.456521739130435rem;
+//     background-size: 1.2077294685990339rem;
+//     width: 0.3502415458937198rem;
+//     height: 0.36231884057971014rem !important;
+//   }
+// }
+//
+//
+// //memoDialog(备注弹框)样式
+// .jw-dialog{
+// 	position: fixed;
+// 	top:0;
+// 	left:0;
+// 	right:0;
+// 	bottom:0;
+// 	z-index:22222;
+// 	overflow: hidden;
+//
+// // 遮罩层样式
+// 	.jw-dialog-mark{
+// 		position: absolute;top:0;
+// 		right:0;
+// 		bottom:0;
+// 		left:0;background: #000000;
+// 		opacity:0.7;
+// 	}
+// 	.jw-dialog-w{
+// 		position: absolute;
+// 		left:pxTorem(20);
+// 		right:pxTorem(20);
+// 		bottom:0;
+// 		border-radius: pxTorem(4);
+//     // 关闭按钮样式
+// 		.jw-dialog-close{
+// 			position: absolute;
+// 			//top:pxTorem(15);
+// 			//right:pxTorem(15);
+// 			top:0;
+// 			right:0;
+// 			margin:pxTorem(15);
+// 		}
+//     // 备注弹框标题
+// 		.jw-dialog-title{
+// 			border-radius: pxTorem(4) pxTorem(4) 0 0;
+// 			height: pxTorem(63);
+// 			background: #FFD600;
+// 			padding:0 pxTorem(35);
+// 			border:none;
+// 			.jw-dialog-pic{
+// 				float: left;
+// 				margin-top:pxTorem(13);
+// 				margin-right:pxTorem(10);
+// 				width: pxTorem(36);
+// 				height: pxTorem(36);
+// 				img{
+// 					width: pxTorem(36);
+// 					height: pxTorem(36);
+// 					border-radius: pxTorem(36);
+// 				}
+// 			}
+// 			.jw-dialog-title-c{
+// 				display: block;
+// 				line-height: pxTorem(63);
+// 				color: #494949;
+// 				font-size:pxTorem(16);
+// 			}
+// 		}
+// 		.jw-dialog-c{
+// 			background: #fff;
+// 			//min-height: pxTorem(100);
+// 			.form-detail{
+// 				padding:0 pxTorem(35);
+// 			}
+// 		}
+//     // 备注弹框确认按钮
+// 		.jw-dialog-btn{
+// 			border:none;
+// 			height: pxTorem(55);
+// 			border-radius: 0 0 pxTorem(4) pxTorem(4);
+// 			background: #F7F7F7;
+// 			line-height: pxTorem(55);
+// 			text-align: center;
+// 			color: #999999;
+// 			font-size:pxTorem(17);
+// 			i{
+// 				vertical-align: middle;
+// 				/*width:pxTorem(17);
+// 				height:pxTorem(17);*/
+// 			}
+// 			span{
+// 				margin-left:pxTorem(10);
+// 				vertical-align: middle;
+// 			}
+// 		}
+// 	}
+// }
+//
+// .hide-scroll{
+// 	overflow: hidden!important;
+// }
+//
+// .clear-padding{
+// 	padding:0!important;
+// }
+//
+//
+// .jw-dialog.fix{
+// 	.jw-dialog-w{
+// 		top:50%;
+// 		bottom: auto;
+// 	}
+// }
+//
+// .appraisal-form{
+// 	padding:pxTorem(24) 0;
+// 	min-height: pxTorem(160);
+// }
+//
+// .am-list.jw-list .am-list-body{
+//   border:none!important;
+// }
+//
+// // memoDialog的右上角的关闭按钮
+// .icon-close-b {
+//   display: inline-block;
+//   background-image: url(./images/sprite.png);
+//   background-position: 0rem -5.036231884057972rem;
+//   background-size: 1.2077294685990339rem;
+//   width: 0.3502415458937198rem;
+//   height: 0.36231884057971014rem;
+// }
+//
+// // memoDialog的确认按钮前的icon
+// .icon-check-36 {
+//   display: inline-block;
+//   background-image: url(./images/sprite.png);
+//   background-position: 0rem -12.379227053140097rem;
+//   background-size: 1.2077294685990339rem;
+//   width: 0.44685990338164255rem;
+//   height: 0.4589371980676329rem;
+// }
+//
+// // .am-modal.am-modal-transparent.am-modal-android.eps-modal-alert{
+// //   .am-modal-content{
+// //     .am-modal-body{
+// //       padding:0 30px 80px;
+// //     }
+// //     .am-modal-button:first-child{
+// //       position:absolute;
+// //       display:block;
+// //       bottom: 0;left: 0;right: 0;
+// //       border-right:0;
+// //       margin-left: 0;
+// //     }
+// //     .am-modal-button:last-child{
+// //       position:absolute;
+// //       display:block;
+// //       bottom: 0;right: 0;
+// //       border-right:0;
+// //       margin-left: 0;
+// //     }
+// //     }
+// //   }
+//
+// // 关闭按钮样式
+//
+// // .jw-alert-btn{
+// //   position: absolute;
+// //   right: 5px;
+// //   top: 0;
+// //   background:transparent;
+// //   width:1.0144927536rem !important;
+// // }
+//
+//
+//   // .am-modal.am-modal-transparent.am-modal-android.eps-modal-alert .am-modal-content .am-modal-body {
+//   //   padding: 0 30px 80px;
+//   // }
+//   // .am-modal.am-modal-transparent.am-modal-android.eps-modal-alert .am-modal-content .am-modal-button:first-child {
+//   //   position: absolute;
+//   //   display: block;
+//   //   bottom: 0;
+//   //   left: 0;
+//   //   right: 0;
+//   //   border-right: 0;
+//   //   margin-left: 0;
+//   // }
+//   // .am-modal.am-modal-transparent.am-modal-android.eps-modal-alert .am-modal-content .am-modal-button:last-child {
+//   //   position: absolute;
+//   //   display: block;
+//   //   bottom: 0;
+//   //   right: 0;
+//   //   border-right: 0;
+//   //   margin-left: 0;
+//   // }
+//   //
+//   //
+//   .eps-alert-custom{
+//   	position: fixed;
+//   	top: 0;
+//   	left: 0;
+//   	right: 0;
+//   	bottom: 0;
+//   	z-index:9999999;
+//   }
