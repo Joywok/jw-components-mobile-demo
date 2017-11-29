@@ -1,12 +1,12 @@
-import { Button, AlertBase, ConfirmBase, MemoDialog } from 'jw-components-mobile';
+import { Button, JwAlert, JwConfirm, JwMemoDialog } from 'jw-components-mobile';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-console.log(AlertBase,ConfirmBase,'ConfirmBaseConfirmBase')
+// console.log(AlertBase,ConfirmBase,'ConfirmBaseConfirmBase')
 
 const alertModal = () =>{
 
-  AlertBase({
+  JwAlert({
       tip: '已成功提交',
       icon: 'icon-alert-success',
       onOk: ()=>{ // 点击确认回调
@@ -26,7 +26,7 @@ const alertModal = () =>{
 
 const confirmModal = () =>{
 
-  ConfirmBase({
+  JwConfirm({
      tip: '确认要提交维修订单？',
      icon: '',
      onOk: ()=>{  // 点击确认回调
@@ -50,7 +50,7 @@ const confirmModal = () =>{
 
 const memoDialog = () =>{
 
-  MemoDialog({
+  JwMemoDialog({
      title: '请输入备注',   // 是否拒绝该订单？ 是否确认通过？
      defaultValue: '', // 默认值
      placeholder: '请输入备注...', // 拒绝必须输入备注...  选择输入备注...

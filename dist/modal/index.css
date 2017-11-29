@@ -1,0 +1,23 @@
+.bg-yellow {
+  background: #FFD600;
+}
+
+.bg-orange {
+  background: #F55928;
+}
+
+.icon-alert-success {
+  display: inline-block;
+  background-image: url(./images/defeat.png);
+  width: 1.9323671498rem;
+  height: 1.9323671498rem;
+}
+
+.icon-check-36 {
+  display: inline-block;
+  background-image: url(./images/sprite.png);
+  background-position: 0rem -12.379227053140097rem;
+  background-size: 1.2077294685990339rem;
+  width: 0.44685990338164255rem;
+  height: 0.4589371980676329rem;
+}

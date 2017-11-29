@@ -1,13 +1,13 @@
-// @import "./../scss/Variables";
-// $fz:41.4;
+@import "./../scss/Variables";
+$fz:41.4;
 //
 // // alert弹出框的图片
-// .icon-alert-success {
-//   display: inline-block;
-//   background-image: url(./images/defeat.png) ;
-//   width:pxTorem(80);
-//   height:pxTorem(80);
-// }
+.icon-alert-success {
+  display: inline-block;
+  background-image: url(./images/defeat.png) ;
+  width:pxTorem(80);
+  height:pxTorem(80);
+}
 //
 // // alert弹出框右上角关闭按钮
 // .am-modal-button{
@@ -146,15 +146,15 @@
 //   height: 0.36231884057971014rem;
 // }
 //
-// // memoDialog的确认按钮前的icon
-// .icon-check-36 {
-//   display: inline-block;
-//   background-image: url(./images/sprite.png);
-//   background-position: 0rem -12.379227053140097rem;
-//   background-size: 1.2077294685990339rem;
-//   width: 0.44685990338164255rem;
-//   height: 0.4589371980676329rem;
-// }
+// memoDialog的确认按钮前的icon
+.icon-check-36 {
+  display: inline-block;
+  background-image: url(./images/sprite.png);
+  background-position: 0rem -12.379227053140097rem;
+  background-size: 1.2077294685990339rem;
+  width: 0.44685990338164255rem;
+  height: 0.4589371980676329rem;
+}
 //
 // // .am-modal.am-modal-transparent.am-modal-android.eps-modal-alert{
 // //   .am-modal-content{
