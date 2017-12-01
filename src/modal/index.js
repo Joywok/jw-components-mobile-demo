@@ -28,7 +28,7 @@ const confirmModal = () =>{
 
   JwConfirm({
      tip: '确认要提交维修订单？',
-     icon: '',
+     icon: 'icon-alert-success',
      onOk: ()=>{  // 点击确认回调
        console.log('onOk')
      },

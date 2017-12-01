@@ -12,6 +12,7 @@ module.exports = {
       'progress/index':[path.resolve(__dirname, 'src/progress/index.js')],
       'toast/index':[path.resolve(__dirname, 'src/toast/index.js')],
       'modal/index':[path.resolve(__dirname, 'src/modal/index.js')],
+      'pull-to-refresh/index':[path.resolve(__dirname, 'src/pull-to-refresh/index.js')],
     },
     // 查错设置，添加此配置后，开发过程中能定位到错误的具体位置，生产时可关闭
     devtool: 'source-map',
