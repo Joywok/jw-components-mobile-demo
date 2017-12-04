@@ -67,7 +67,6 @@ const memoDialog = () =>{
 
 }
 
-
 class App extends React.Component{
 
   render(){
