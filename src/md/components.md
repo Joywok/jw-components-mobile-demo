@@ -9,9 +9,7 @@
 
  a.提示页面的某个输入字段或可选字段为必填（选）；<br/>
     ![](images/acessGuide.png) <br/>
- b.提示某个字段不能重复添加；<br/>
-    ![](images/acessGuide.png)<br/>
- c.提示某项操作成功（失败）；<br/>
+ b.提示某项操作成功（失败）；<br/>
     ![](images/acessGuide.png)<br/>
 * **使用方法**：
 
@@ -24,7 +22,7 @@
                // 点击确认回调
                console.log('onOk')
             },
-        	onClose: ()=>{
+            onClose: ()=>{
               // 关闭弹框回调
         	},
         	okBtn: {   
@@ -230,7 +228,7 @@
             </tr>
             <tr>  
               <td style="text-align:center">defaultValue</td>  
-              <td>默认值</td>
+              <td>输入框显示的默认值</td>
               <td>" "</td>   
             </tr>
             <tr>  
@@ -238,23 +236,23 @@
               <td>输入框的提示文字</td>
               <td>请输入备注...</td>  
             </tr>
-             <tr style="text-align:center">  
-              <td>memorequired</td>  
+             <tr>  
+              <td style="text-align:center">memorequired</td>  
               <td>备注是否必填</td>
               <td>true</td>  
             </tr>
-            <tr style="text-align:center">  
-              <td>btnIconClass</td>  
-              <td>button的icon图标</td>
+            <tr>  
+              <td  style="text-align:center">btnIconClass</td>  
+              <td>button前的icon图标的className</td>
               <td>" ",应该传图标的className，不传不显示</td>  
             </tr>
-            <tr style="text-align:center">  
-              <td>okBtnClick</td>  
-              <td>点击按钮的回调函数</td>
+            <tr>  
+              <td  style="text-align:center">okBtnClick</td>  
+              <td>确认按钮的回调函数</td>
               <td>无</td>  
             </tr>
-            <tr style="text-align:center">  
-              <td>onClose</td>  
+            <tr>  
+              <td style="text-align:center">onClose</td>  
               <td>关闭按钮的回调函数</td>
               <td>无</td>  
             </tr>
@@ -266,7 +264,7 @@
             <tr>  
               <td style="text-align:center">avatar</td>  
               <td>标题前的icon</td>
-              <td>默认的icon，传图片路径</td>  
+              <td>" "，传图片路径,不传不显示</td>  
             </tr>
           <tbody>
         </table>
@@ -293,6 +291,14 @@
         import { Toast } from 'jw-components-mobile';
 
         Toast.info('建卡成功', 2, null, true);  //true代表有遮罩层
+**注：遮罩层默认背景颜色是透明的，如果需要改变，请参照如下代码：**<br/>
+
+        .am-toast.am-toast-mask{
+          background-color: rgba(0,0,0,0.5)!important;
+          background-color: #000;
+          filter:Alpha(opacity=50);
+        }
+
 
 ######&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2 成功类提示，如 “提交成功”<br/>
 
@@ -416,4 +422,70 @@
         </tr>
       <tbody>
     </table>
-</div>   
+</div> <br/>  
+
+
+ ####6.PullToRefresh
+
+ * **说明**：拉动刷新，通过触发，立刻重新加载内容<br/>
+
+ * **使用场景**：<br/>
+
+  a.登录 APP 后，自动刷新首页 List<br/>
+  ![](images/acessGuide.png) <br/>
+  b.可以和 ListView 结合使用，也可以单独使用；<br/>
+  ![](images/acessGuide.png) <br/>
+
+ * **使用方法**：<br/>
+        <PullToRefresh
+            //下拉时需要显示的文字提示
+            indicator={this.state.down ? { } : { deactivate: '上拉刷新' }}
+            //拉动方向
+            direction={this.state.down ? 'down' : 'up'}
+            //刷新距离
+            distanceToRefresh={window.devicePixelRatio * 25}
+            //是否显示刷新状态
+            refreshing={this.state.refreshing}
+            //刷新时的回调函数
+            onRefresh={this.onRefresh}    
+        >
+
+
+* **使用场景**：<br/>
+
+<div class="param-table" style="margin-left:40px;margin-top:-320px;">
+    <table border="1"  style="border-collapse:collapse;width:500px; height:180px;">  
+      <thead>
+        <th>属性</th>  
+        <th>说明</th>   
+        <th>默认值</th>
+      </thead>
+      </tbody>
+        <tr>  
+          <td style="text-align:center">direction</td>  
+          <td>拉动方向，可以是 up 或 down</td>
+          <td>down</td>    
+        </tr>
+        <tr>  
+          <td style="text-align:center">distanceToRefresh</td>  
+          <td>刷新距离</td>
+          <td>25 </td>   
+        </tr>
+        <tr>  
+          <td style="text-align:center">refreshing</td>  
+          <td>是否显示刷新状态</td>
+          <td>false</td>  
+        </tr>
+         <tr>  
+          <td style="text-align:center">onRefresh</td>  
+          <td>必选, 刷新回调函数</td>
+          <td>-</td>  
+        </tr>
+        <tr>  
+          <td style="text-align:center">indicator</td>  
+          <td>指示器配置 { activate: ReactNode, deactivate: ReactNode, release: ReactNode, finish: ReactNode }</td>
+          <td>-</td>  
+        </tr>
+      <tbody>
+    </table>
+</div> <br/> 
