@@ -13,7 +13,7 @@
     "webpackStart": "webpack-dev-server --inline --hot --host 127.0.0.1",
     "webpackBuild": "webpack --display-error-details",
     "webpackWatch": "webpack --progress --colors --watch",
-    "start": "webpack-dev-server --inline --hot --host 192.168.1.187",
+    "start": "webpack-dev-server --inline --hot --host 192.168.1.131",
     "build": "webpack -p"
   },
   "dependencies": {

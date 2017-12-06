@@ -449,9 +449,9 @@
             //刷新时的回调函数
             onRefresh={this.onRefresh}    
         >
+        </PullToRefresh>
 
-
-* **使用场景**：<br/>
+* **参数**：<br/>
 
 <div class="param-table" style="margin-left:40px;margin-top:-320px;">
     <table border="1"  style="border-collapse:collapse;width:500px; height:180px;">  
@@ -488,4 +488,130 @@
         </tr>
       <tbody>
     </table>
-</div> <br/> 
+</div> <br/>
+
+
+ ####7.ListView
+
+  * **说明**：适用于显示同类的长列表数据类型，对渲染性能有一定的优化效果。<br/>
+
+  * **使用场景**：
+
+  a.适用于显示同类的长列表数据类型<br/>
+  ![](images/acessGuide.png) <br/>
+
+
+  * **使用方法**：<br/>
+
+        <ListView
+            dataSource={this.state.dataSource}
+            renderHeader={() => <span>header</span>}
+            renderFooter={() => (<div style={{ padding: 30, textAlign: 'center' }}>
+              {this.state.isLoading ? 'Loading...' : 'Loaded'}
+            </div>)}
+            renderRow={row}
+            renderSeparator={separator}
+            className="am-list"
+            pageSize={4}
+            useBodyScroll
+            onScroll={() => { console.log('scroll'); }}
+            scrollRenderAheadDistance={500}
+            onEndReached={this.onEndReached}
+            onEndReachedThreshold={10}
+        />
+
+  * **参数**：<br/>
+
+<div class="param-table" style="margin-left:40px;margin-top:-860px;">
+    <table border="1"  style="border-collapse:collapse;width:500px; height:480px;">  
+        <thead>
+            <th>属性</th>  
+            <th>说明</th>   
+            <th>默认值</th>
+        </thead>
+        <tbody>
+            <tr>  
+              <td style="text-align:center">dataSource</td>  
+              <td>ListView.DataSource (cn) / ListView.DataSource (us) 实例</td>
+              <td>&nbsp;&nbsp;-</td>    
+            </tr>
+            <tr>  
+              <td style="text-align:center">initialListSize</td>  
+              <td>指定在组件刚挂载的时候渲染多少行数据，用这个属性来确保首屏显示合适数量的数据</td>
+              <td>&nbsp;&nbsp;-</td>   
+            </tr>
+            <tr>  
+              <td style="text-align:center"></td>  
+              <td></td>
+              <td>&nbsp;&nbsp;-</td>   
+            </tr>
+            <tr>  
+              <td style="text-align:center">refreshing</td>  
+              <td>是否显示刷新状态</td>
+              <td>false</td>  
+            </tr>
+             <tr>  
+              <td style="text-align:center">onRefresh</td>  
+              <td>必选, 刷新回调函数</td>
+              <td>-</td>  
+            </tr>
+            <tr>  
+              <td style="text-align:center">indicator</td>  
+              <td>指示器配置 { activate: ReactNode, deactivate: ReactNode, release: ReactNode, finish: ReactNode }</td>
+              <td>-</td>  
+            </tr>
+            <tr>  
+              <td style="text-align:center">direction</td>  
+              <td>拉动方向，可以是 up 或 down</td>
+              <td>down</td>    
+            </tr>
+            <tr>  
+              <td style="text-align:center">distanceToRefresh</td>  
+              <td>刷新距离</td>
+              <td>25 </td>   
+            </tr>
+            <tr>  
+              <td style="text-align:center">refreshing</td>  
+              <td>是否显示刷新状态</td>
+              <td>false</td>  
+            </tr>
+             <tr>  
+              <td style="text-align:center">onRefresh</td>  
+              <td>必选, 刷新回调函数</td>
+              <td>-</td>  
+            </tr>
+            <tr>  
+              <td style="text-align:center">indicator</td>  
+              <td>指示器配置 { activate: ReactNode, deactivate: ReactNode, release: ReactNode, finish: ReactNode }</td>
+              <td>-</td>  
+            </tr>
+            <tr>  
+              <td style="text-align:center">direction</td>  
+              <td>拉动方向，可以是 up 或 down</td>
+              <td>down</td>    
+            </tr>
+            <tr>  
+              <td style="text-align:center">distanceToRefresh</td>  
+              <td>刷新距离</td>
+              <td>25 </td>   
+            </tr>
+            <tr>  
+              <td style="text-align:center">refreshing</td>  
+              <td>是否显示刷新状态</td>
+              <td>false</td>  
+            </tr>
+             <tr>  
+              <td style="text-align:center">onRefresh</td>  
+              <td>必选, 刷新回调函数</td>
+              <td>-</td>  
+            </tr>
+            <tr>  
+              <td style="text-align:center">indicator</td>  
+              <td>指示器配置 { activate: ReactNode, deactivate: ReactNode, release: ReactNode, finish: ReactNode }</td>
+              <td>-</td>  
+            </tr>
+         </tbody>
+   </table>
+</div> <br/>
+
+ 
