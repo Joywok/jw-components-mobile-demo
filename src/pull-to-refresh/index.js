@@ -18,6 +18,7 @@ class Demo extends React.Component {
       down: true,
       height: document.documentElement.clientHeight,
       data: [],
+      hasMore:true,
     };
   }
 
@@ -30,6 +31,8 @@ class Demo extends React.Component {
   }
 
   render() {
+
+    let indicator = this.state.hasMore ? {activate: '下拉刷新',finish:" ",deactivate:'下拉刷新'}:{activate: '没有更多了',finish:" ",deactivate:'没有更多了'}
     return (<div>
       <Button
         style={{ marginBottom: 15 }}
@@ -43,7 +46,7 @@ class Demo extends React.Component {
           height: this.state.height,
           overflow: 'auto',
         }}
-        indicator={this.state.down ? { deactivate: '下拉刷新' } : { deactivate: '上拉刷新' }}
+        indicator={this.state.down ? indicator : { activate: '上拉刷新' }}
         direction={this.state.down ? 'down' : 'up'}
         distanceToRefresh={window.devicePixelRatio * 25}
         refreshing={this.state.refreshing}

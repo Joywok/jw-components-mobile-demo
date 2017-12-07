@@ -40,37 +40,43 @@
 
 * **参数**：
 
-    <div class="param-table" style="margin-top:-320px">
-        <table border="1"  style="border-collapse:collapse;width:500px; height:180px;">  
+    <div class="param-table" style="margin-top:-300px">
+        <table border="1"  style="border-collapse:collapse;width:700px; height:180px;">  
           <thead style="text-align:center">
             <th >属性</th>  
-            <th>说明</th>   
+            <th>说明</th>
+            <th>类型</th>
             <th>默认值</th>
           </thead>
           </tbody>
             <tr>  
               <td style="text-align:center">tip</td>  
               <td>弹出框的提示文字</td>
+              <td style="text-align:center">String</td>
               <td> " "</td>    
             </tr>
             <tr>  
               <td style="text-align:center">icon</td>  
               <td>弹出框的图标</td>
+              <td style="text-align:center">String</td>
               <td>" ",应该传图标的className，不传不显示</td>   
             </tr>
             <tr>  
               <td style="text-align:center">onOk</td>  
               <td>点击确认的回调函数</td>
+              <td style="text-align:center">Function</td>
               <td>无</td>  
             </tr>
             <tr>  
               <td style="text-align:center">onClose</td>  
               <td>关闭弹出框的回调函数</td>
+              <td style="text-align:center">Function</td>
               <td>无</td>  
             </tr>
             <tr>  
               <td style="text-align:center">okBtn</td>  
               <td>按钮需显示文字</td>
+              <td style="text-align:center">Object</td>
               <td>知道了</td>  
             </tr>
           <tbody>
@@ -126,46 +132,54 @@
 * **参数**：
 
     <div class="param-table" style="margin-top:-420px">
-        <table border="1"  style="border-collapse:collapse;width:500px; height:240px;">  
+        <table border="1"  style="border-collapse:collapse;width:700px; height:240px;">  
           <thead style="text-align:center">
             <th>属性</th>  
-            <th>说明</th>   
+            <th>说明</th>
+            <th>类型</th>
             <th>默认值</th>
           </thead>
           </tbody>
             <tr>  
               <td style="text-align:center">tip</td>  
               <td>弹出框的提示文字</td>
+              <td style="text-align:center">String</td>
               <td> " "</td>    
             </tr>
             <tr>  
               <td style="text-align:center">icon</td>  
               <td>弹出框的图标</td>
+              <td style="text-align:center">String</td>
               <td>" ",应该传图标的className，不传不显示</td>   
             </tr>
             <tr>  
               <td style="text-align:center">onOk</td>  
               <td>点击确认的回调函数</td>
+              <td style="text-align:center">Function</td>
               <td>无</td>  
             </tr>
              <tr>  
               <td style="text-align:center">onCancel</td>  
               <td>点击取消的回调函数</td>
+              <td style="text-align:center">Function</td>
               <td>无</td>  
             </tr>
             <tr>  
               <td style="text-align:center">onClose</td>  
               <td>关闭弹出框的回调函数</td>
+              <td style="text-align:center">Function</td>
               <td>无</td>  
             </tr>
             <tr>  
               <td style="text-align:center">okBtn</td>  
               <td>确认按钮需显示文字</td>
+              <td style="text-align:center">Object</td>
               <td>确认</td>  
             </tr>
             <tr>  
               <td style="text-align:center">cancelBtn</td>  
               <td>取消按钮需显示文字</td>
+              <td style="text-align:center">Object</td>
               <td>取消</td>  
             </tr>
           <tbody>
@@ -213,57 +227,67 @@
 
 * **参数**：
 
-    <div class="param-table" style="margin-top:-540px">
-        <table border="1"  style="border-collapse:collapse;width:500px; height:300px;">  
+    <div class="param-table" style="margin-top:-520px">
+        <table border="1"  style="border-collapse:collapse;width:700px; height:300px;">  
           <thead style="text-align:center">
             <th>属性</th>  
-            <th>说明</th>   
+            <th>说明</th>
+            <th>类型</th>
             <th>默认值</th>
           </thead>
           </tbody>
             <tr>  
               <td style="text-align:center">title</td>  
               <td>输入框的内容</td>
+              <td style="text-align:center">String</td>
               <td>请输入备注</td>    
             </tr>
             <tr>  
               <td style="text-align:center">defaultValue</td>  
               <td>输入框显示的默认值</td>
+              <td style="text-align:center">String</td>
               <td>" "</td>   
             </tr>
             <tr>  
               <td style="text-align:center">placeholder</td>  
               <td>输入框的提示文字</td>
+              <td style="text-align:center">String</td>
               <td>请输入备注...</td>  
             </tr>
              <tr>  
               <td style="text-align:center">memorequired</td>  
               <td>备注是否必填</td>
+              <td style="text-align:center">Boolean</td>
               <td>true</td>  
             </tr>
             <tr>  
               <td  style="text-align:center">btnIconClass</td>  
               <td>button前的icon图标的className</td>
+              <td style="text-align:center">String</td>
               <td>" ",应该传图标的className，不传不显示</td>  
             </tr>
             <tr>  
               <td  style="text-align:center">okBtnClick</td>  
               <td>确认按钮的回调函数</td>
+              <td style="text-align:center">Function</td>
               <td>无</td>  
             </tr>
             <tr>  
               <td style="text-align:center">onClose</td>  
               <td>关闭按钮的回调函数</td>
+              <td style="text-align:center">Function</td>
               <td>无</td>  
             </tr>
             <tr>  
               <td style="text-align:center">btnVal</td>  
               <td>按钮应该显示的文字</td>
+              <td style="text-align:center">String</td>
               <td>确认</td>  
             </tr>
             <tr>  
               <td style="text-align:center">avatar</td>  
               <td>标题前的icon</td>
+              <td style="text-align:center">String</td>
               <td>" "，传图片路径,不传不显示</td>  
             </tr>
           <tbody>
@@ -327,31 +351,36 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**组件共提供以上五个静态方法，参数如下：**<br/>
 
 <div class="param-table" style="margin-top:-270px;margin-left:25px">
-    <table border="1"  style="border-collapse:collapse;width:500px; height:150px;">  
+    <table border="1"  style="border-collapse:collapse;width:700px; height:150px;">  
       <thead>
         <th>属性</th>  
-        <th>说明</th>   
+        <th>说明</th>  
+        <th>类型</th>
         <th>默认值</th>
       </thead>
       </tbody>
         <tr style="text-align:center">  
           <td>content</td>  
           <td>提示内容</td>
+          <td style="text-align:center">React.Element or String</td>
           <td>无</td>    
         </tr>
         <tr style="text-align:center">  
           <td>duration</td>  
           <td>自动关闭的延时，单位秒</td>
+          <td style="text-align:center">number</td>
           <td>3</td>   
         </tr>
         <tr style="text-align:center">  
           <td>onClose</td>  
           <td>关闭后回调</td>
+          <td style="text-align:center">Function</td>
           <td>无</td>  
         </tr>
          <tr style="text-align:center">  
           <td>mask</td>  
           <td>是否显示透明蒙层，防止触摸穿透</td>
+          <td style="text-align:center">Boolean</td>
           <td>true</td>  
         </tr>
       <tbody>
@@ -387,37 +416,43 @@
 * **参数**：<br/>
 
 
-<div class="param-table" style="margin-left:40px;margin-top:-320px;">
-    <table border="1"  style="border-collapse:collapse;width:500px; height:180px;">  
+<div class="param-table" style="margin-left:40px;margin-top:-310px;">
+    <table border="1"  style="border-collapse:collapse;width:700px; height:180px;">  
       <thead>
         <th>属性</th>  
-        <th>说明</th>   
+        <th>说明</th>
+        <th>类型</th>
         <th>默认值</th>
       </thead>
       </tbody>
         <tr>  
           <td style="text-align:center">mode</td>  
           <td>提示类型，可选 closable，link</td>
+          <td style="text-align:center">String</td>
           <td>" "</td>    
         </tr>
         <tr>  
           <td style="text-align:center">icon</td>  
           <td>在开始位置设置图标</td>
+          <td style="text-align:center">ReactNode</td>
           <td>Icon type={require('./trips.svg')} size="xxs" </td>   
         </tr>
         <tr>  
           <td style="text-align:center">onClick</td>  
           <td>点击关闭或者操作区域的回调函数</td>
+          <td style="text-align:center">(): void</td>
           <td>无</td>  
         </tr>
          <tr>  
           <td style="text-align:center">marqueeProps</td>  
           <td>marquee 参数</td>
+          <td style="text-align:center">Object</td>
           <td>{loop: false, leading: 500, trailing: 800, fps: 40, style: {}}</td>  
         </tr>
         <tr>  
           <td style="text-align:center">action</td>  
           <td>用于替换操作 icon 的文案</td>
+          <td style="text-align:center">ReactElement</td>
           <td>无</td>  
         </tr>
       <tbody>
@@ -431,9 +466,13 @@
 
  * **使用场景**：<br/>
 
-  a.登录 APP 后，自动刷新首页 List<br/>
+  a.登录 APP 后，自动刷新首页 List；<br/>
   ![](images/acessGuide.png) <br/>
   b.可以和 ListView 结合使用，也可以单独使用；<br/>
+  ![](images/acessGuide.png) <br/>
+  c.适用于下拉刷新的长列表数据类型；<br/>
+  ![](images/acessGuide.png) <br/>
+  d.适用于上拉加载更多的长列表数据类型；<br/>
   ![](images/acessGuide.png) <br/>
 
  * **使用方法**：<br/>
@@ -453,37 +492,43 @@
 
 * **参数**：<br/>
 
-<div class="param-table" style="margin-left:40px;margin-top:-320px;">
-    <table border="1"  style="border-collapse:collapse;width:500px; height:180px;">  
+<div class="param-table" style="margin-left:40px;margin-top:-310px;">
+    <table border="1"  style="border-collapse:collapse;width:700px; height:180px;">  
       <thead>
         <th>属性</th>  
-        <th>说明</th>   
+        <th>说明</th>
+        <th>类型</th>
         <th>默认值</th>
       </thead>
       </tbody>
         <tr>  
           <td style="text-align:center">direction</td>  
           <td>拉动方向，可以是 up 或 down</td>
+          <td style="text-align:center">String</td>
           <td>down</td>    
         </tr>
         <tr>  
           <td style="text-align:center">distanceToRefresh</td>  
           <td>刷新距离</td>
+          <td style="text-align:center">number</td>
           <td>25 </td>   
         </tr>
         <tr>  
           <td style="text-align:center">refreshing</td>  
           <td>是否显示刷新状态</td>
+          <td style="text-align:center">bool</td>
           <td>false</td>  
         </tr>
          <tr>  
           <td style="text-align:center">onRefresh</td>  
           <td>必选, 刷新回调函数</td>
+          <td style="text-align:center">() => void</td>
           <td>-</td>  
         </tr>
         <tr>  
           <td style="text-align:center">indicator</td>  
           <td>指示器配置 { activate: ReactNode, deactivate: ReactNode, release: ReactNode, finish: ReactNode }</td>
+          <td style="text-align:center">Object</td>
           <td>-</td>  
         </tr>
       <tbody>
@@ -497,9 +542,14 @@
 
   * **使用场景**：
 
-  a.适用于显示同类的长列表数据类型<br/>
+  a.适用于显示同类的长列表数据类型（无标题的）<br/>
   ![](images/acessGuide.png) <br/>
 
+  b.适用于标题吸顶的长列表数据类型<br/>
+  ![](images/acessGuide.png) <br/>
+
+  c.适用于索引列表且标题吸顶的数据类型<br/>
+  ![](images/acessGuide.png) <br/>
 
   * **使用方法**：<br/>
 
@@ -522,96 +572,153 @@
 
   * **参数**：<br/>
 
-<div class="param-table" style="margin-left:40px;margin-top:-860px;">
-    <table border="1"  style="border-collapse:collapse;width:500px; height:480px;">  
+<div class="param-table" style="margin-left:40px;margin-top:-1280px;">
+    <table border="1"  style="border-collapse:collapse;width:700px; height:720px;">  
         <thead>
             <th>属性</th>  
-            <th>说明</th>   
+            <th>说明</th>
+            <th>类型</th>
             <th>默认值</th>
         </thead>
         <tbody>
             <tr>  
               <td style="text-align:center">dataSource</td>  
               <td>ListView.DataSource (cn) / ListView.DataSource (us) 实例</td>
+              <td>ListViewDataSource</td>
               <td>&nbsp;&nbsp;-</td>    
             </tr>
             <tr>  
               <td style="text-align:center">initialListSize</td>  
               <td>指定在组件刚挂载的时候渲染多少行数据，用这个属性来确保首屏显示合适数量的数据</td>
+              <td>number</td>
               <td>&nbsp;&nbsp;-</td>   
             </tr>
             <tr>  
-              <td style="text-align:center"></td>  
+              <td style="text-align:center">onEndReached</td>  
+              <td>当所有的数据都已经渲染过，并且列表被滚动到距离最底部不足onEndReachedThreshold个像素的距离时调用</td>
+              <td>(event?) => {}</td>
+              <td>&nbsp;&nbsp;-</td>    
+            </tr>
+             <tr>  
+              <td style="text-align:center">onEndReachedThreshold</td>  
+              <td>调用onEndReached之前的临界值，单位是像素</td>
+              <td>number</td>
+              <td>1000</td>    
+            </tr>
+             <tr>  
+              <td style="text-align:center">pageSize</td>  
+              <td>每次事件循环（每帧）渲染的行数</td>
+              <td>number</td>
+              <td>1</td>    
+            </tr>
+             <tr>  
+              <td style="text-align:center">renderHeader / renderFooter</td>  
+              <td>页头与页脚（如果提供）会在每次渲染过程中都重新渲染。如果它们重绘的性能开销很大，把他们包装到一个StaticContainer或者其它恰当的结构中。页脚在列表的最底部，而页头会在最顶部</td>
+              <td>() => renderable</td>
+              <td>&nbsp;&nbsp;-</td>    
+            </tr>
+             <tr>  
+              <td style="text-align:center">renderRow</td>  
+              <td>从数据源(data source)中接受一条数据，以及它和它所在section的ID。返回一个可渲染的组件来为这行数据进行渲染。默认情况下参数中的数据就是放进数据源中的数据本身，不过也可以提供一些转换器。如果某一行正在被高亮（通过调用highlightRow函数），ListView会得到相应的通知。</td>
+              <td>(rowData, sectionID, rowID, highlightRow) => renderable</td>
+              <td>&nbsp;&nbsp;-</td>    
+            </tr>
+             <tr>  
+              <td style="text-align:center">renderScrollComponent</td>  
+              <td>指定一个函数，在其中返回一个可以滚动的组件，ListView将会在该组件内部进行渲染。默认情况下会返回一个包含指定属性的ScrollView。</td>
+              <td>(props) => renderable</td>
+              <td>&nbsp;&nbsp;-</td>    
+            </tr>
+              <tr>  
+              <td style="text-align:center">renderSectionHeader</td>  
+              <td>如果提供了此函数，会为每个小节(section)渲染一个标题</td>
+              <td>(sectionData, sectionID) => renderable</td>
+              <td>&nbsp;&nbsp;-</td>    
+            </tr>
+             <tr>  
+              <td style="text-align:center">renderSeparator</td>  
+              <td>如果提供了此属性，一个可渲染的组件会被渲染在每一行下面，除了小节标题的前面的最后一行。在其上方的小节ID和行ID，以及邻近的行是否被高亮会作为参数传递进来。</td>
+              <td>(sectionID, rowID, adjacentRowHighlighted) => renderable</td>
+              <td>&nbsp;&nbsp;-</td>    
+            </tr>
+             <tr>  
+              <td style="text-align:center">scrollRenderAheadDistance</td>  
+              <td>当一个行接近屏幕范围多少像素之内的时候，就开始渲染这一行</td>
+              <td>number</td>
+              <td>1000</td>    
+            </tr>
+            <tr>  
+              <td style="text-align:center">contentContainerStyle</td>  
+              <td>这些样式会应用到一个内层的内容容器上，所有的子视图都会包裹在内容容器内</td>
+              <td>Object</td>
+              <td>&nbsp;&nbsp;-</td>    
+            </tr>
+             <tr>  
+              <td style="text-align:center">horizontal</td>  
+              <td>当此属性为true的时候，所有的的子视图会在水平方向上排成一行，而不是默认的在垂直方向上排成一列</td>
+              <td>bool</td>
+              <td>false</td>    
+            </tr>
+             <tr>  
+              <td style="text-align:center">onContentSizeChange</td>  
+              <td>此函数会在 ScrollView 内部可滚动内容的视图发生变化时调用。</td>
+              <td>(contentWidth, contentHeight) => {}</td>
+              <td>&nbsp;&nbsp;-</td>    
+            </tr>
+            <tr>  
+              <td style="text-align:center">onScroll</td>  
+              <td>在滚动的过程中，每帧最多调用一次此回调函数。调用的频率可以用scrollEventThrottle属性来控制。</td>
+              <td>e => {}</td>
+              <td>&nbsp;&nbsp;-</td>    
+            </tr>
+             <tr>  
+              <td style="text-align:center">scrollEventThrottle</td>  
+              <td>控制在滚动过程中，scroll事件被调用的频率</td>
+              <td>number</td>
+              <td>50</td>    
+            </tr>
+             <tr>  
+              <td style="text-align:center">onLayout</td>  
+              <td>当组件挂载或者布局变化的时候调用</td>
+              <td>({nativeEvent:{ layout:{ width, height }}}) => {}</td>
+              <td>&nbsp;&nbsp;-</td>    
+            </tr>
+            <tr>  
+              <td style="text-align:center">------</td>  
               <td></td>
-              <td>&nbsp;&nbsp;-</td>   
-            </tr>
-            <tr>  
-              <td style="text-align:center">refreshing</td>  
-              <td>是否显示刷新状态</td>
-              <td>false</td>  
+              <td></td>
+              <td></td>    
             </tr>
              <tr>  
-              <td style="text-align:center">onRefresh</td>  
-              <td>必选, 刷新回调函数</td>
-              <td>-</td>  
-            </tr>
-            <tr>  
-              <td style="text-align:center">indicator</td>  
-              <td>指示器配置 { activate: ReactNode, deactivate: ReactNode, release: ReactNode, finish: ReactNode }</td>
-              <td>-</td>  
-            </tr>
-            <tr>  
-              <td style="text-align:center">direction</td>  
-              <td>拉动方向，可以是 up 或 down</td>
-              <td>down</td>    
-            </tr>
-            <tr>  
-              <td style="text-align:center">distanceToRefresh</td>  
-              <td>刷新距离</td>
-              <td>25 </td>   
-            </tr>
-            <tr>  
-              <td style="text-align:center">refreshing</td>  
-              <td>是否显示刷新状态</td>
-              <td>false</td>  
+              <td style="text-align:center">renderBodyComponent (web only)</td>  
+              <td>自定义 body 的包裹组件</td>
+              <td>() => renderable</td>
+              <td>&nbsp;&nbsp;-</td>    
             </tr>
              <tr>  
-              <td style="text-align:center">onRefresh</td>  
-              <td>必选, 刷新回调函数</td>
-              <td>-</td>  
+              <td style="text-align:center">renderSectionWrapper (web only)</td>  
+              <td>渲染自定义的区块包裹组件。</td>
+              <td>(sectionID) => renderable</td>
+              <td>&nbsp;&nbsp;-</td>    
             </tr>
             <tr>  
-              <td style="text-align:center">indicator</td>  
-              <td>指示器配置 { activate: ReactNode, deactivate: ReactNode, release: ReactNode, finish: ReactNode }</td>
-              <td>-</td>  
+              <td style="text-align:center">renderSectionBodyWrapper (web only)</td>  
+              <td>渲染自定义的区块 body 包裹组件。</td>
+              <td>(sectionID) => renderable</td>
+              <td>&nbsp;&nbsp;-</td>    
+            </tr>
+               <tr>  
+              <td style="text-align:center">useBodyScroll (web only)</td>  
+              <td>使用 html 的 body 作为滚动容器。</td>
+              <td>bool</td>
+              <td>false</td>    
             </tr>
             <tr>  
-              <td style="text-align:center">direction</td>  
-              <td>拉动方向，可以是 up 或 down</td>
-              <td>down</td>    
-            </tr>
-            <tr>  
-              <td style="text-align:center">distanceToRefresh</td>  
-              <td>刷新距离</td>
-              <td>25 </td>   
-            </tr>
-            <tr>  
-              <td style="text-align:center">refreshing</td>  
-              <td>是否显示刷新状态</td>
-              <td>false</td>  
-            </tr>
-             <tr>  
-              <td style="text-align:center">onRefresh</td>  
-              <td>必选, 刷新回调函数</td>
-              <td>-</td>  
-            </tr>
-            <tr>  
-              <td style="text-align:center">indicator</td>  
-              <td>指示器配置 { activate: ReactNode, deactivate: ReactNode, release: ReactNode, finish: ReactNode }</td>
-              <td>-</td>  
+              <td style="text-align:center">pullToRefresh (web only)</td>  
+              <td>使用 pullToRefresh， 你需要和 PullToRefresh 组件一起使用。</td>
+              <td>bool</td>
+              <td>false</td>    
             </tr>
          </tbody>
    </table>
 </div> <br/>
-
- 
