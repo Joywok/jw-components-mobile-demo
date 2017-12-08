@@ -1,3 +1,41 @@
 .am-list-header {
+  font-size: 16px !important;
   padding: 10px !important;
+}
+
+.am-list-footer {
+  font-size: 16px !important;
+  padding: 6px 10px 10px 10px !important;
+}
+
+.am-button {
+  width: 50% !important;
+}
+
+.am-list-item {
+  padding-left: 0 !important;
+}
+.am-list-item .am-list-line {
+  padding-right: 0 !important;
+}
+.am-list-item .am-list-line .am-list-content {
+  font-size: 20px !important;
+}
+
+.sticky-list .sticky-container .am-list-item {
+  padding-left: 0;
+}
+
+.sticky-list .sticky-container .am-list-line {
+  padding-right: 0;
+}
+
+.sticky-list .sticky-container .am-list-line .am-list-content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.sticky-list .sticky-container .sticky {
+  padding: 7px 15px;
+  transform: none;
 }
