@@ -14,6 +14,7 @@ module.exports = {
       'modal/index':[path.resolve(__dirname, 'src/modal/index.js')],
       'pull-to-refresh/index':[path.resolve(__dirname, 'src/pull-to-refresh/index.js')],
       'list-view/index':[path.resolve(__dirname, 'src/list-view/index.js')],
+      'radio/index':[path.resolve(__dirname, 'src/radio/index.js')],
     },
     // 查错设置，添加此配置后，开发过程中能定位到错误的具体位置，生产时可关闭
     devtool: 'source-map',

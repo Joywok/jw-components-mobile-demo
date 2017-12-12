@@ -1725,13 +1725,13 @@
             </tr>
             <tr>  
               <td style="text-align:center">initialListSize</td>  
-              <td>指定在组件刚挂载的时候渲染多少行数据，用这个属性来确保首屏显示合适数量的数据</td>
+              <td>指定在组件刚挂载的时候渲染多少行数据，用这个属性来确保首屏显示合适数量的数据，而不是花费太多帧逐步显示出来。</td>
               <td>number</td>
               <td>&nbsp;&nbsp;-</td>   
             </tr>
             <tr>  
               <td style="text-align:center">onEndReached</td>  
-              <td>当所有的数据都已经渲染过，并且列表被滚动到距离最底部不足onEndReachedThreshold个像素的距离时调用</td>
+              <td>当所有的数据都已经渲染过，并且列表被滚动到距离最底部不足onEndReachedThreshold个像素的距离时调用。</td>
               <td>(event?) => {}</td>
               <td>&nbsp;&nbsp;-</td>    
             </tr>
@@ -1826,31 +1826,31 @@
               <td></td>    
             </tr>
              <tr>  
-              <td style="text-align:center">renderBodyComponent (web only)</td>  
+              <td style="text-align:center">renderBodyComponent </td>  
               <td>自定义 body 的包裹组件</td>
               <td>() => renderable</td>
               <td>&nbsp;&nbsp;-</td>    
             </tr>
              <tr>  
-              <td style="text-align:center">renderSectionWrapper (web only)</td>  
+              <td style="text-align:center">renderSectionWrapper </td>  
               <td>渲染自定义的区块包裹组件。</td>
               <td>(sectionID) => renderable</td>
               <td>&nbsp;&nbsp;-</td>    
             </tr>
             <tr>  
-              <td style="text-align:center">renderSectionBodyWrapper (web only)</td>  
+              <td style="text-align:center">renderSectionBodyWrapper </td>  
               <td>渲染自定义的区块 body 包裹组件。</td>
               <td>(sectionID) => renderable</td>
               <td>&nbsp;&nbsp;-</td>    
             </tr>
                <tr>  
-              <td style="text-align:center">useBodyScroll (web only)</td>  
+              <td style="text-align:center">useBodyScroll </td>  
               <td>使用 html 的 body 作为滚动容器。</td>
               <td>bool</td>
               <td>false</td>    
             </tr>
             <tr>  
-              <td style="text-align:center">pullToRefresh (web only)</td>  
+              <td style="text-align:center">pullToRefresh </td>  
               <td>使用 pullToRefresh， 你需要和 PullToRefresh 组件一起使用。</td>
               <td>bool</td>
               <td>false</td>    
@@ -1858,3 +1858,73 @@
          </tbody>
    </table>
 </div> <br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ListView.IndexedList**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此组件常用于 “通讯录”/“城市列表” 等场景中，支持索引导航功能。<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*你可以使用 ListView 上的几乎所有 APIs。*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*注意：由于索引列表可以点击任一项索引来定位其内容、即内容需要直接滚动到任意位置，这样就难<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以做到像 ListView 一样能在滚动时自动懒渲染。目前实现上只支持分两步渲染，能借此达到首屏优<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;先显示目的，但如果列表数据量过大时、整体性能仍会有影响。*
+
+<div class="param-table" style="margin-left:40px;margin-top:-360px;">
+    <table border="1"  style="border-collapse:collapse;width:700px; height:180px;">  
+      <thead>
+        <th>属性</th>  
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+      </thead>
+      </tbody>
+        <tr>  
+          <td style="text-align:center">quickSearchBarTop</td>  
+          <td>快捷导航栏最顶部按钮、常用于回到顶部</td>
+          <td>object{value:string, label:string}/td>
+          <td>{ value: '#', label: '#' }</td>    
+        </tr>
+        <tr>  
+          <td style="text-align:center">quickSearchBarStyle</td>  
+          <td>quickSearchBar 的 style</td>
+          <td>object</td>
+          <td>&nbsp;&nbsp;-</td>   
+        </tr>
+        <tr>  
+          <td style="text-align:center">onQuickSearch</td>  
+          <td>快捷导航切换时调用</td>
+          <td>(sectionID: any, topId?:any) => void</td>
+          <td>&nbsp;&nbsp;-</td>  
+        </tr>
+         <tr>  
+          <td style="text-align:center">showQuickSearchIndicator</td>  
+          <td>whether show quick search indicator</td>
+          <td>bool</td>
+          <td>false</td>  
+        </tr>
+        <tr>  
+          <td style="text-align:center">delayTime</td>  
+          <td>延迟渲染时间设置（用于首屏优化，一开始渲染initialListSize数量的数据，在此时间后、延迟渲染剩余的数据项、即totalRowCount - initialListSize）</td>
+          <td>number</td>
+          <td>100ms</td>  
+        </tr>
+        <tr>  
+          <td style="text-align:center">delayActivityIndicator</td>  
+          <td>延迟渲染的 loading 指示器</td>
+          <td>react node</td>
+          <td>&nbsp;&nbsp;-</td>  
+        </tr>
+      <tbody>
+    </table>
+</div> <br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**提示：**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ListView 有两种类型的滚动容器：
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、局部 div 容器
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 默认，注意：**需要手动给 ListView 设置高度**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、html 的 body 容器
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 设置useBodyScroll后生效 (不需要设置高度)

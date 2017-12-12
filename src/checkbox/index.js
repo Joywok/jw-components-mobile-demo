@@ -1,8 +1,11 @@
-import { List, Checkbox, Flex } from "jw-components-mobile";
+// import { List, Checkbox, Flex } from 'antd-mobile';
+import { List, Checkbox } from 'jw-components-mobile';
+import { Flex } from 'antd-mobile';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 const CheckboxItem = Checkbox.CheckboxItem;
+const AgreeItem = Checkbox.AgreeItem;
 
 class Test extends React.Component {
   onChange = (val) => {
@@ -12,7 +15,7 @@ class Test extends React.Component {
     const data = [
       { value: 0, label: 'Ph.D.' },
       { value: 1, label: 'Bachelor' },
-      { value: 2, label: 'college diploma' },
+      { value: 2, label: 'College diploma' },
     ];
     return (<div>
       <List renderHeader={() => 'CheckboxItem demo'}>
@@ -22,9 +25,17 @@ class Test extends React.Component {
           </CheckboxItem>
         ))}
         <CheckboxItem key="disabled" data-seed="logId" disabled defaultChecked multipleLine>
-          undergraduate<List.Item.Brief>Auxiliary text</List.Item.Brief>
+          Undergraduate<List.Item.Brief>Auxiliary text</List.Item.Brief>
         </CheckboxItem>
       </List>
+
+      <Flex>
+        <Flex.Item>
+          <AgreeItem data-seed="logId" onChange={e => console.log('checkbox', e)}>
+            Agree <a onClick={(e) => { e.preventDefault(); alert('agree it'); }}>agreement</a>
+          </AgreeItem>
+        </Flex.Item>
+      </Flex>
     </div>);
   }
 }
