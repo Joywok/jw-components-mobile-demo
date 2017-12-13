@@ -1,7 +1,8 @@
-import { Button, JwAlert, JwConfirm, JwMemoDialog } from 'jw-components-mobile';
+import { JwAlert, JwConfirm, JwMemoDialog } from 'jw-components-mobile/lib/modal';
+import { Button } from "jw-components-mobile";
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+console.log(JwAlert,JwConfirm,JwMemoDialog,"jw")
 // console.log(AlertBase,ConfirmBase,'ConfirmBaseConfirmBase')
 
 const alertModal = () =>{

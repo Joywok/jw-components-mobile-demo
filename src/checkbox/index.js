@@ -18,7 +18,7 @@ class Test extends React.Component {
       { value: 2, label: 'College diploma' },
     ];
     return (<div>
-      <List renderHeader={() => 'CheckboxItem demo'}>
+      <List className="jw-list" renderHeader={() => 'CheckboxItem demo'}>
         {data.map(i => (
           <CheckboxItem key={i.value} onChange={() => this.onChange(i.value)}>
             {i.label}

@@ -22,10 +22,12 @@ class Test extends React.Component {
     const data = [
       { value: 0, label: 'doctor' },
       { value: 1, label: 'bachelor' },
+      { value: 2, label: 'teacher' },
+      { value: 3, label: 'computer' },
     ];
 
     return (<div>
-      <List renderHeader={() => 'RadioItem demo'}>
+      <List className="jw-list" renderHeader={() => 'RadioItem demo'}>
         {data.map(i => (
           <RadioItem key={i.value} checked={value === i.value} onChange={() => this.onChange(i.value)}>
             {i.label}
