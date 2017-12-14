@@ -1,7 +1,9 @@
-import { List, Radio } from 'jw-components-mobile';
+import { JwList } from 'jw-components-mobile/lib/list';
+import { Radio } from 'jw-components-mobile';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// console.log(JwList,'oooooooo')
 const RadioItem = Radio.RadioItem;
 
 class Test extends React.Component {
@@ -17,7 +19,17 @@ class Test extends React.Component {
       value,
     });
   };
+
+  componentDidMount(){
+    // $(ReactDOM.findDOMNode(this.refs.jwRadio)).closest(".am-radio-checked").find(".am-list-content").addClass('jw-radio-checked')
+  }
+
   render() {
+    // console.log(JwList,'pppppppppp')
+    setTimeout(()=>{
+      $('.am-radio').closest('.jw-radio').find('.am-list-content').removeClass('jw-radio-checked');
+      $('.am-radio-checked').closest('.jw-radio').find('.am-list-content').addClass('jw-radio-checked');
+    })
     const { value, value2, value3, value4 } = this.state;
     const data = [
       { value: 0, label: 'doctor' },
@@ -27,13 +39,13 @@ class Test extends React.Component {
     ];
 
     return (<div>
-      <List className="jw-list" renderHeader={() => 'RadioItem demo'}>
+      <JwList renderHeader={() => 'RadioItem demo'}>
         {data.map(i => (
-          <RadioItem key={i.value} checked={value === i.value} onChange={() => this.onChange(i.value)}>
+          <RadioItem className="jw-radio" key={i.value} checked={value === i.value} onChange={() => this.onChange(i.value)}>
             {i.label}
           </RadioItem>
         ))}
-      </List>
+      </JwList>
     </div>);
   }
 }
