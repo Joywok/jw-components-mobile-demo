@@ -25,7 +25,7 @@
             onClose: ()=>{
               // 关闭弹框回调
             },
-        	okBtn: {   
+            okBtn: {   
               // 此参数可不传，不传默认为 知道了
         	  text: '确认'
         	}
@@ -1928,3 +1928,239 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、html 的 body 容器
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 设置useBodyScroll后生效 (不需要设置高度)
+
+
+ ####8.Radio
+
+  * **说明**：单选框、单选按钮<br/>
+
+  * **使用场景**：
+
+  a.调查问卷、考题里的单项选择；<br/>
+  ![](images/acessGuide.png) <br/>
+
+  b.关于兴趣爱好、客户标签的单选项；<br/>
+  ![](images/acessGuide.png) <br/>
+
+  c.长列表中每个卡片的选择；<br/>
+  ![](images/acessGuide.png) <br/>
+
+  d.用于同意协议这种场景；<br/>
+  ![](images/acessGuide.png) <br/>
+
+  * **使用方法**：<br/>
+
+        <RadioItem showtype={'jw-radio-button'} key={i.value} checked={value === i.value} onChange={() => this.onChange(i.value)}>
+           {i.label}
+        </RadioItem>
+
+
+* **示例代码**：<br/>
+
+        import { List, Radio } from 'jw-components-mobile';
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+
+        const RadioItem = Radio.RadioItem;
+
+        class Test extends React.Component {
+          state = {
+            value: 0,
+            value2: 0,
+            value3: 0,
+            value4: 0,
+          };
+          onChange = (value) => {
+            console.log('checkbox');
+            this.setState({
+              value,
+            });
+          };
+
+          render() {
+            const { value, value2, value3, value4 } = this.state;
+            const data = [
+              { value: 0, label: 'doctor' },
+              { value: 1, label: 'bachelor' },
+              { value: 2, label: 'teacher' },
+              { value: 3, label: 'computer' },
+            ];
+
+            return (<div>
+              <List renderHeader={() => 'RadioItem demo'}>
+                {data.map(i => (
+                  <RadioItem showtype={'jw-radio-button'} key={i.value} checked={value === i.value} onChange={() => this.onChange(i.value)}>
+                    {i.label}
+                  </RadioItem>
+                ))}
+              </List>
+            </div>);
+          }
+        }
+
+        ReactDOM.render(<Test />, document.getElementById('root'));
+
+ ** 注：组件的引用方式有以下两种**<br/>
+
+        import { List } from 'jw-components-mobile';
+
+        import { default as List } from "jw-components-mobile/lib/list";
+
+* ** 参数**：<br/>
+
+<div class="param-table" style="margin-left:40px;margin-top:-360px;">
+    <table border="1"  style="border-collapse:collapse;width:700px; height:180px;">  
+      <thead>
+        <th>属性</th>  
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+      </thead>
+      </tbody>
+        <tr>  
+          <td style="text-align:center">name</td>  
+          <td>name</td>
+          <td style="text-align:center">String</td>
+          <td>无</td>    
+        </tr>
+        <tr>  
+          <td style="text-align:center">defaultChecked</td>  
+          <td>初始是否选中</td>
+          <td style="text-align:center">Boolean</td>
+          <td>无 </td>   
+        </tr>
+        <tr>  
+          <td style="text-align:center">checked</td>  
+          <td>指定当前是否选中</td>
+          <td style="text-align:center">Boolean</td>
+          <td>无</td>  
+        </tr>
+         <tr>  
+          <td style="text-align:center">disabled</td>  
+          <td>禁用</td>
+          <td style="text-align:center">Boolean</td>
+          <td>false</td>  
+        </tr>
+        <tr>  
+          <td style="text-align:center">onChange</td>  
+          <td>change 事件触发的回调函数</td>
+          <td style="text-align:center">(e: Object): void</td>
+          <td>无</td>  
+        </tr>
+        <tr>  
+          <td style="text-align:center">showtype</td>  
+          <td>单选框的显示类型</td>
+          <td style="text-align:center">String</td>
+          <td>无</td>  
+        </tr>
+      <tbody>
+    </table>
+</div> <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;** 注： showType不传时，显示的是正常的单选框；传入 ' jw-radio-button ' 时,显示的是类似于按钮<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;的单选框；也可以传入自定义的showtype，自己修改样式；**
+
+ ####9.Checkbox
+
+  * **说明**：复选框、复选按钮<br/>
+
+  * **使用场景**：
+
+  a.调查问卷、考题里的多项选择；<br/>
+  ![](images/acessGuide.png) <br/>
+
+  b.关于兴趣爱好、客户标签的多选项；<br/>
+  ![](images/acessGuide.png) <br/>
+
+  c.长列表中每个卡片的选择；<br/>
+  ![](images/acessGuide.png) <br/>
+
+  d.用于同意协议这种场景；<br/>
+  ![](images/acessGuide.png) <br/>
+
+  * **使用方法**：<br/>
+
+        <CheckboxItem showtype={'jw-checkbox-button'}  key={i.value} onChange={() => this.onChange(i.value)}>
+           {i.label}
+        </CheckboxItem>
+
+
+* **示例代码**：<br/>
+
+        import { List, Checkbox } from 'jw-components-mobile';
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+
+        const CheckboxItem = Checkbox.CheckboxItem;
+
+        class Test extends React.Component {
+          onChange = (val) => {
+            console.log(val);
+          }
+          render() {
+            const data = [
+              { value: 0, label: 'Ph.D.' },
+              { value: 1, label: 'Bachelor' },
+              { value: 2, label: 'College diploma' },
+            ];
+            return (<div>
+              <List renderHeader={() => 'CheckboxItem demo'}>
+                {data.map(i => (
+                  <CheckboxItem showtype={'jw-checkbox-button'} key={i.value} onChange={() => this.onChange(i.value)}>
+                    {i.label}
+                  </CheckboxItem>
+                ))}
+                <CheckboxItem key="disabled" data-seed="logId" disabled defaultChecked multipleLine>
+                  Undergraduate<List.Item.Brief>Auxiliary text</List.Item.Brief>
+                </CheckboxItem>
+              </List>
+            </div>);
+          }
+        }
+
+        ReactDOM.render(<Test />, document.getElementById('root'));
+
+
+* ** 参数**：<br/>
+
+<div class="param-table" style="margin-left:40px;margin-top:-310px;">
+    <table border="1"  style="border-collapse:collapse;width:700px; height:180px;">  
+      <thead>
+        <th>属性</th>  
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+      </thead>
+      </tbody>
+        <tr>  
+          <td style="text-align:center">defaultChecked</td>  
+          <td>初始是否选中</td>
+          <td style="text-align:center">Boolean</td>
+          <td>无 </td>   
+        </tr>
+        <tr>  
+          <td style="text-align:center">checked</td>  
+          <td>指定当前是否选中</td>
+          <td style="text-align:center">Boolean</td>
+          <td>无</td>  
+        </tr>
+         <tr>  
+          <td style="text-align:center">disabled</td>  
+          <td>禁用</td>
+          <td style="text-align:center">Boolean</td>
+          <td>false</td>  
+        </tr>
+        <tr>  
+          <td style="text-align:center">onChange</td>  
+          <td>change 事件触发的回调函数</td>
+          <td style="text-align:center">(e: Object): void</td>
+          <td>无</td>  
+        </tr>
+        <tr>  
+          <td style="text-align:center">showtype</td>  
+          <td>单选框的显示类型</td>
+          <td style="text-align:center">String</td>
+          <td>无</td>  
+        </tr>
+      <tbody>
+    </table>
+</div> <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;** 注： showType不传时，显示的是正常的复选框；传入 ' jw-checkbox-button ' 时,显示的是类似于<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;按钮的复选框；也可以传入自定义的showtype，自己修改样式；**

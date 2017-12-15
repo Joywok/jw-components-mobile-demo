@@ -1,9 +1,9 @@
-import { JwList } from 'jw-components-mobile/lib/list';
-import { Radio } from 'jw-components-mobile';
+// import { default as List } from "jw-components-mobile/lib/list";
+import { List, Radio } from 'jw-components-mobile';
+import { Flex } from 'antd-mobile';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// console.log(JwList,'oooooooo')
 const RadioItem = Radio.RadioItem;
 
 class Test extends React.Component {
@@ -20,16 +20,7 @@ class Test extends React.Component {
     });
   };
 
-  componentDidMount(){
-    // $(ReactDOM.findDOMNode(this.refs.jwRadio)).closest(".am-radio-checked").find(".am-list-content").addClass('jw-radio-checked')
-  }
-
   render() {
-    // console.log(JwList,'pppppppppp')
-    setTimeout(()=>{
-      $('.am-radio').closest('.jw-radio').find('.am-list-content').removeClass('jw-radio-checked');
-      $('.am-radio-checked').closest('.jw-radio').find('.am-list-content').addClass('jw-radio-checked');
-    })
     const { value, value2, value3, value4 } = this.state;
     const data = [
       { value: 0, label: 'doctor' },
@@ -39,15 +30,23 @@ class Test extends React.Component {
     ];
 
     return (<div>
-      <JwList renderHeader={() => 'RadioItem demo'}>
+      <List renderHeader={() => 'RadioItem demo'}>
         {data.map(i => (
-          <RadioItem className="jw-radio" key={i.value} checked={value === i.value} onChange={() => this.onChange(i.value)}>
+          <RadioItem showtype={'jw-radio-button'} key={i.value} checked={value === i.value} onChange={() => this.onChange(i.value)}>
             {i.label}
           </RadioItem>
         ))}
-      </JwList>
+      </List>
+
     </div>);
   }
 }
 
 ReactDOM.render(<Test />, document.getElementById('root'));
+
+// <Flex style={{ padding: '15px' }}>
+//   <Flex.Item style={{ padding: '15px 0', color: '#888', flex: 'none' }}>Radio demo(dustomized style)</Flex.Item>
+//   <Flex.Item>
+//     <Radio className="my-radio" onChange={e => console.log('checkbox', e)}>Agree</Radio>
+//   </Flex.Item>
+// </Flex>

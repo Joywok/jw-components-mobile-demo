@@ -4,14 +4,24 @@ import { Flex } from 'antd-mobile';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
 const CheckboxItem = Checkbox.CheckboxItem;
-const AgreeItem = Checkbox.AgreeItem;
+console.log(CheckboxItem,'CheckboxItem111111111111111')
+// const AgreeItem = Checkbox.AgreeItem;
 
 class Test extends React.Component {
   onChange = (val) => {
-    console.log(val);
+
+  }
+  componentDidMount(){
+
   }
   render() {
+
+    // setTimeout(()=>{
+    //   $('.am-checkbox').closest('.am-checkbox-item').find('.am-list-content').removeClass('dlm-checkbox-color');
+    //   $('.am-checkbox-checked').closest('.am-checkbox-item').find('.am-list-content').addClass('dlm-checkbox-color');
+    // })
     const data = [
       { value: 0, label: 'Ph.D.' },
       { value: 1, label: 'Bachelor' },
@@ -20,24 +30,14 @@ class Test extends React.Component {
     return (<div>
       <List className="jw-list" renderHeader={() => 'CheckboxItem demo'}>
         {data.map(i => (
-          <CheckboxItem key={i.value} onChange={() => this.onChange(i.value)}>
+          <CheckboxItem showtype={'jw-checkbox-button'}  key={i.value} onChange={() => this.onChange(i.value)}>
             {i.label}
           </CheckboxItem>
         ))}
-        <CheckboxItem key="disabled" data-seed="logId" disabled defaultChecked multipleLine>
-          Undergraduate<List.Item.Brief>Auxiliary text</List.Item.Brief>
-        </CheckboxItem>
       </List>
-
-      <Flex>
-        <Flex.Item>
-          <AgreeItem data-seed="logId" onChange={e => console.log('checkbox', e)}>
-            Agree <a onClick={(e) => { e.preventDefault(); alert('agree it'); }}>agreement</a>
-          </AgreeItem>
-        </Flex.Item>
-      </Flex>
     </div>);
   }
+  did
 }
 
 ReactDOM.render(<Test />, document.getElementById('root'));
