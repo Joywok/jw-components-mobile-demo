@@ -6,8 +6,8 @@ import ReactDOM from 'react-dom';
 
 
 const CheckboxItem = Checkbox.CheckboxItem;
+const AgreeItem = Checkbox.AgreeItem;
 console.log(CheckboxItem,'CheckboxItem111111111111111')
-// const AgreeItem = Checkbox.AgreeItem;
 
 class Test extends React.Component {
   onChange = (val) => {
@@ -17,11 +17,6 @@ class Test extends React.Component {
 
   }
   render() {
-
-    // setTimeout(()=>{
-    //   $('.am-checkbox').closest('.am-checkbox-item').find('.am-list-content').removeClass('dlm-checkbox-color');
-    //   $('.am-checkbox-checked').closest('.am-checkbox-item').find('.am-list-content').addClass('dlm-checkbox-color');
-    // })
     const data = [
       { value: 0, label: 'Ph.D.' },
       { value: 1, label: 'Bachelor' },

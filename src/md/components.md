@@ -1985,12 +1985,23 @@
               { value: 2, label: 'teacher' },
               { value: 3, label: 'computer' },
             ];
+            const data2 = [
+              { value: 0, label: 'basketball', extra: 'details' },
+              { value: 1, label: 'football', extra: 'details' },
+            ];
 
             return (<div>
               <List renderHeader={() => 'RadioItem demo'}>
                 {data.map(i => (
                   <RadioItem showtype={'jw-radio-button'} key={i.value} checked={value === i.value} onChange={() => this.onChange(i.value)}>
                     {i.label}
+                  </RadioItem>
+                ))}
+              </List>
+              <List>
+                {data2.map(i => (
+                  <RadioItem key={i.value} checked={value4 === i.value} onChange={() => this.onChange4(i.value)} disabled>
+                    {i.label}<List.Item.Brief>{i.extra}</List.Item.Brief>
                   </RadioItem>
                 ))}
               </List>
@@ -2056,6 +2067,11 @@
       <tbody>
     </table>
 </div> <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;**Radio.RadioItem**<br/>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;基于List.Item对Radio进行封装,List.Item的extra属性固定传入Radio,其他<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;属性和List.Item一致。 其他 API 和 Radio 相同。<br/>
+
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;** 注： showType不传时，显示的是正常的单选框；传入 ' jw-radio-button ' 时,显示的是类似于按钮<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;的单选框；也可以传入自定义的showtype，自己修改样式；**
 
  ####9.Checkbox
@@ -2163,4 +2179,10 @@
       <tbody>
     </table>
 </div> <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;**Checkbox.CheckboxItem**<br/>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;基于List.Item对Checkbox进行封装,List.Item的thumb属性固定传入Checkbox,其他属性和List.Item一<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;致。 其他 API 和 Checkbox 相同。
+
+
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;** 注： showType不传时，显示的是正常的复选框；传入 ' jw-checkbox-button ' 时,显示的是类似于<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;按钮的复选框；也可以传入自定义的showtype，自己修改样式；**

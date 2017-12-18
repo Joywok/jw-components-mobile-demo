@@ -14,7 +14,7 @@ class Test extends React.Component {
     value4: 0,
   };
   onChange = (value) => {
-    console.log('checkbox');
+    console.log('checkbox1111111');
     this.setState({
       value,
     });
@@ -32,7 +32,7 @@ class Test extends React.Component {
     return (<div>
       <List renderHeader={() => 'RadioItem demo'}>
         {data.map(i => (
-          <RadioItem showtype={'jw-radio-button'} key={i.value} checked={value === i.value} onChange={() => this.onChange(i.value)}>
+          <RadioItem key={i.value} checked={value === i.value} onChange={() => this.onChange(i.value)}>
             {i.label}
           </RadioItem>
         ))}
