@@ -6,14 +6,14 @@
     "jw-components-mobile"
   ],
   "engines": {
-    "node" : ">=6.5"
+    "node": ">=6.5"
   },
   "main": "index.js",
   "scripts": {
-    "webpackStart": "webpack-dev-server --inline --hot --host 192.168.1.95",
+    "webpackStart": "webpack-dev-server --inline --hot --host 192.168.1.132",
     "webpackBuild": "webpack --display-error-details",
     "webpackWatch": "webpack --progress --colors --watch",
-    "start": "webpack-dev-server --inline --hot --host 192.168.1.95",
+    "start": "webpack-dev-server --inline --hot --host 192.168.1.132",
     "build": "webpack -p"
   },
   "dependencies": {
@@ -21,18 +21,20 @@
     "autoprefixer": "^6.7.5",
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.0",
     "babel-loader": "^6.3.1",
     "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.16.0",
     "babel-runtime": "^6.9.2",
-    "babel-polyfill": "^6.23.0",
-    "babel-eslint": "^7.1.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-debug": "^2.0.1",
     "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.1.1",
@@ -41,15 +43,14 @@
     "gulp-ruby-sass": "^2.1.1",
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^2.1.2",
-    "gulp-debug": "^2.0.1",
-    "gulp-autoprefixer": "^4.0.0",
     "hammerjs": "^2.0.8",
     "imagemin-pngquant": "^5.0.0",
+    "jw-components-mobile": "0.0.27",
     "loader-runner": "^2.3.0",
     "node-sass": "^4.5.0",
     "path": "^0.12.7",
-    "postcss-loader": "^1.3.1",
     "postcss-load-config": "",
+    "postcss-loader": "^1.3.1",
     "precss": "^1.4.0",
     "pubsub-js": "^1.5.7",
     "react": "^15.4.0",
@@ -62,8 +63,7 @@
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1",
     "webpack-visualizer-plugin": "^0.1.6",
-    "wolfy87-eventemitter": "^5.1.0",
-    "jw-components-mobile": ""
+    "wolfy87-eventemitter": "^5.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",

@@ -1,0 +1,7 @@
+input, input:focus, input:active {
+  user-select: text;
+}
+
+body {
+  overflow-x: hidden;
+}

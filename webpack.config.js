@@ -8,6 +8,17 @@ module.exports = {
     entry: {
       'button/index':[path.resolve(__dirname, 'src/button/index.js')],
       'checkbox/index':[path.resolve(__dirname, 'src/checkbox/index.js')],
+      'radio/index':[path.resolve(__dirname, 'src/radio/index.js')],
+      'input/index':[path.resolve(__dirname, 'src/input/index.js')],
+      'navbar/index':[path.resolve(__dirname, 'src/navbar/index.js')],
+      'picker/index':[path.resolve(__dirname, 'src/picker/index.js')],
+      'list/index':[path.resolve(__dirname, 'src/list/index.js')],
+      'date/index':[path.resolve(__dirname, 'src/date/index.js')],
+      'actionsheet/index':[path.resolve(__dirname, 'src/actionsheet/index.js')],
+      'toast/index':[path.resolve(__dirname, 'src/toast/index.js')],
+      'tabbar/index':[path.resolve(__dirname, 'src/tabbar/index.js')],
+      'loading/index':[path.resolve(__dirname, 'src/loading/index.js')],
+      'segment/index':[path.resolve(__dirname, 'src/segment/index.js')],
     },
     // 查错设置，添加此配置后，开发过程中能定位到错误的具体位置，生产时可关闭
     devtool: 'source-map', 
@@ -15,7 +26,7 @@ module.exports = {
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: '[name].js',
-      // chunkFilename: "nav/[name].js"
+      chunkFilename: "nav/[name].js"
     },
     resolve: {
       modules: ['node_modules', path.join(__dirname, './node_modules')],

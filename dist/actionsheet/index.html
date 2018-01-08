@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+  <title> Mobile ActionSheet Demo</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+<div id="root">
+</div>
+</body>
+<script type="text/javascript" src="./index.js"></script>
+<script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+<script type="text/javascript">
+  window.fz = (document.documentElement.clientWidth / 10);
+  document.documentElement.style.fontSize = fz+'px';
+ if ('addEventListener' in document) {
+      document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+      }, false);
+    }
+    if(!window.Promise) {
+      document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+    }
+</script>
+</html>
